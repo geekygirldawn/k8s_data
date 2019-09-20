@@ -20,6 +20,12 @@ def get_sig_meetings():
                     print(z['description'], z['day'], z['time'], z['tz'], z['frequency'])
             except:
                 pass
+    for k in sigs_wgs["workinggroups"]:
+        print('\nWG ', k['name'], ':', sep='')
+
+        for x in k['meetings']:
+            print(x['description'], x['day'], x['time'], x['tz'], x['frequency'])
+
 
 
 get_sig_meetings()
