@@ -15,7 +15,6 @@ def get_sig_meetings():
 
         for y in k['subprojects']:
             try:
-                #print(y['meetings'])
                 for z in y['meetings']:
                     print(z['description'], z['day'], z['time'], z['tz'], z['frequency'])
             except:
@@ -25,7 +24,6 @@ def get_sig_meetings():
 
         for x in k['meetings']:
             print(x['description'], x['day'], x['time'], x['tz'], x['frequency'])
-
 
 
 get_sig_meetings()
