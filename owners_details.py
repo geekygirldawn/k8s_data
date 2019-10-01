@@ -33,7 +33,8 @@ def read_cncf_affiliations():
     affil_dict = {}
     
     for item in affil_file:
-        username = item['login']
+        # Force username to lower case for consistent affiliation checks
+        username = item['login'].lower()
         
         try:
             affiliation = item['affiliation']
@@ -53,6 +54,9 @@ def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file,
     
     # Writes a single line to the csv file with data about owners, including
     # SIG/WG, subproject (if applicable), affiliation, owners url
+
+    # Make sure username is lower case before checking affiliation
+    username = username.lower()
 
     # Only print real users to the csv file. Need to filter out aliases.
     ban = ['approve', 'review', 'maintain', 'leads', 'sig-', 'admins', 'release', 'licensing', 'managers', 'owners']
