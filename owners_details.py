@@ -87,10 +87,12 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
     alias_file = download_file(alias_url)
     aliases = yaml.safe_load(alias_file)
     
+    # Filter out anything that isn't a SIG/WG (committees, etc.)
     for x in aliases['aliases'].items():
-        sig_or_wg = x[0][:-6] #Note: this strips the -leads from the end of the sig name
-        for username in x[1]:
-            write_affil_line(username, role, sig_or_wg, 'NA', alias_url, csv_file, affil_dict)
+        if x[0].startswith('sig') or x[0].startswith('wg'):
+            sig_or_wg = x[0][:-6] #Note: this strips the -leads from the end of the sig name
+            for username in x[1]:
+                write_affil_line(username, role, sig_or_wg, 'NA', alias_url, csv_file, affil_dict)
     
 def build_owners_csv():
 
