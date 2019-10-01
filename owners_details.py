@@ -1,5 +1,7 @@
+#!/usr/local/bin/python3
+
 # Note: This only uses a subset of k8s OWNERS files. 
-# Owners file from sigs.yaml plus the OWNERS_ALIASES file with leads
+# Uses owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
 
 def download_file(url):
 
@@ -9,35 +11,20 @@ def download_file(url):
     # Example: sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
 
     import urllib.request
-    import os
-    import shutil
-    import random
     
-    output_file = '/tmp/output_file_k8s'
-
-    # Save file before overwriting, just in case
-    if os.path.exists(output_file):
-        output_bak = output_file + str(random.randint(0,1024))
-        shutil.move(output_file, output_bak)
-
-    #sig_file = wget.download(url, out=output_file)
     sig_file = urllib.request.urlopen(url)
 
     return sig_file
 
 def read_cncf_affiliations():
     
-    # Download CNCF json file and create an affiliation dictionary indexed
+    # Download the contents of the CNCF json file and create an affiliation dictionary indexed
     # by GitHub username to make finding affilions faster for later functions.
     # Includes only current affiliation and excludes robot accounts.
 
     import json
-    import os
     
     filename = download_file('https://raw.githubusercontent.com/cncf/devstats/master/github_users.json')
-    
-    #stream = open(filename, 'r')
-    #affil_file = json.load(stream)
     affil_file = json.load(filename)
     
     affil_dict = {}
@@ -57,8 +44,6 @@ def read_cncf_affiliations():
         except:
             affiliation = 'N/A'
             
-    #os.remove(filename)
-    
     return affil_dict
 
 def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict):
@@ -83,11 +68,8 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
     # for subproject.
      
     import yaml
-    import os
 
     alias_file = download_file(alias_url)
-    #stream = open(alias_file, 'r')
-    #aliases = yaml.safe_load(stream)
     aliases = yaml.safe_load(alias_file)
     
     for x in aliases['aliases'].items():
@@ -95,26 +77,18 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
         for username in x[1]:
             write_affil_line(username, role, sig_or_wg, 'NA', alias_url, csv_file, affil_dict)
     
-    try:
-        os.remove(alias_file)
-    except:
-        pass
-    
 def build_owners_csv():
 
     # This is the primary function that pulls all of this together.
-    # It gets the list of OWNERS files from sigs.yaml, downloads and 
-    # parses each OWNERS file, and writes details about owners to a
+    # It gets the list of OWNERS files from sigs.yaml, downloads the 
+    # content of each OWNERS file, and writes details about owners to a
     # csv file which is dropped into the current directory.
   
     import yaml
-    import os
 
     affil_dict = read_cncf_affiliations()
 
     sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')    
-    '''stream = open(sig_file, 'r')
-    sigs = yaml.safe_load(stream)'''
     sigs = yaml.safe_load(sig_file)
     
     csv_file = open('owners_data.csv','w')
@@ -133,7 +107,7 @@ def build_owners_csv():
             for owners_url in y['owners']:
                 subproject = y['name']
     
-                # Download owners files and load them. Print error message for files that 404
+                # Download contents of owners files and load them. Print error message for files that 404
                 try:
                     owners_file = download_file(owners_url)
                     #stream = open(owners_file, 'r')
@@ -141,7 +115,7 @@ def build_owners_csv():
                     owners = yaml.safe_load(owners_file)
                     
                 except:
-                    print("Can't find", sig_name, owners_url)
+                    print("Cannot get", sig_name, owners_url)
 
                 # Wrapped with 'try' since not every owners file has approvers and reviewers. 
                 try:
@@ -156,16 +130,6 @@ def build_owners_csv():
                 except:
                     pass
                 
-                try:
-                    os.remove(owners_file)
-                except:
-                    pass
-        
-    try:
-        os.remove(sig_file)
-    except:
-        pass
-    
     csv_file.close()   
     
 build_owners_csv()
