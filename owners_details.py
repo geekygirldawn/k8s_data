@@ -54,16 +54,24 @@ def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file,
     # Writes a single line to the csv file with data about owners, including
     # SIG/WG, subproject (if applicable), affiliation, owners url
 
-    if username in affil_dict:
-        affil = affil_dict[username]
-        if affil == '?':
-            affil = 'NotFound'
-    else:
-        affil = 'NotFound'
-        
-    line = ",".join([affil, username, role, sig_name, subproject, owners_url]) + "\n"
-    csv_file.write(line)
+    # Only print real users to the csv file. Need to filter out aliases.
+    ban = ['approve', 'review', 'maintain', 'leads', 'sig-', 'admins', 'release', 'licensing', 'managers', 'owners']
 
+    flag = 1
+    for b in ban:
+        if b in username:
+            flag = 0
+    if flag == 1:
+        if username in affil_dict:
+            affil = affil_dict[username]
+            if affil == '?':
+                affil = 'NotFound'
+        else:
+            affil = 'NotFound'
+
+        line = ",".join([affil, username, role, sig_name, subproject, owners_url]) + "\n"
+        csv_file.write(line)
+    
 def write_aliases(role, alias_url, csv_file, affil_dict):
 
     # Takes OWNERS_ALIASES file with details about SIG/WG leadership and
