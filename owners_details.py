@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3
 
+# Copyright (C) 2019 Dawn M. Foster
+# Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
+
 # Note: This only uses a subset of k8s OWNERS files. 
 # Uses owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
 
