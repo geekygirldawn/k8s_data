@@ -4,7 +4,7 @@
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
 # Note: This only uses a subset of k8s OWNERS files. 
-# Uses owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
+# Uses the owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
 
 def download_file(url):
 
