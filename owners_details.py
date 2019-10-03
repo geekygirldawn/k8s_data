@@ -95,9 +95,10 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
                 write_affil_line(username, role, sig_or_wg, 'NA', alias_url, csv_file, affil_dict)
 
 def get_sig_list(sigs):
+
+    # Gets the list of SIGs from sigs.yaml using the dir format sig-name
+
     import yaml
-#    sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
-#    sigs_wgs = yaml.safe_load(sig_file)
     
     sig_name_list = []
     
@@ -108,6 +109,9 @@ def get_sig_list(sigs):
 
 def find_sig(sig_name_list, area):
     
+    # Uses the sig-name formatted data from sigs.yaml and compares to data from OWNERS_ALIASES 
+    # to determine the SIG name
+
     sig_name = 'NA'
     for name in sig_name_list:
         if area.startswith(name):
@@ -116,6 +120,12 @@ def find_sig(sig_name_list, area):
     return sig_name
 
 def kk_aliases(sigs, csv_file, affil_dict):
+
+    # Reads OWNERS_ALIASES file from k/k and uses the find_sig function to split the
+    # area into SIG, subproject, and role for things that are mostly, but not always,
+    # formatted like sig-name-subproject-role. Example: sig-auth-audit-approvers
+    # Then it grabs org affiliation and other data before saving it to the CSV file.
+
     import yaml
 
     sig_name_list = get_sig_list(sigs)
@@ -152,12 +162,12 @@ def kk_aliases(sigs, csv_file, affil_dict):
             else:
                 subproject = area[len(sig_name)+1:-role_len-1]
 
+            if subproject == '':
+                subproject = 'NA'
+
             if 'NA' not in sig_name:
-                #print(area)
-                #print(sig_name, subproject, role)
                 for username in y[1]:
                     write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict)
-                    #print(username)
  
 def build_owners_csv():
 
