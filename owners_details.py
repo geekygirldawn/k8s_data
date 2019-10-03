@@ -93,7 +93,72 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
             sig_or_wg = x[0][:-6] #Note: this strips the -leads from the end of the sig name
             for username in x[1]:
                 write_affil_line(username, role, sig_or_wg, 'NA', alias_url, csv_file, affil_dict)
+
+def get_sig_list(sigs):
+    import yaml
+#    sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
+#    sigs_wgs = yaml.safe_load(sig_file)
     
+    sig_name_list = []
+    
+    for k in sigs["sigs"]:
+        sig_name_list.append(k['dir'])
+        
+    return sig_name_list
+
+def find_sig(sig_name_list, area):
+    
+    sig_name = 'NA'
+    for name in sig_name_list:
+        if area.startswith(name):
+            sig_name = area[:len(name)]
+            
+    return sig_name
+
+def kk_aliases(sigs, csv_file, affil_dict):
+    import yaml
+
+    sig_name_list = get_sig_list(sigs)
+
+    owners_url = 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/OWNERS_ALIASES'
+    k_k_alias_file = download_file(owners_url)
+    k_k_aliases = yaml.safe_load(k_k_alias_file)
+
+    for x in k_k_aliases.items():
+        for y in x[1].items():
+            area = y[0]
+
+            if area.endswith('approvers'):
+                role = 'approver'
+                role_len = 9
+            elif area.endswith('reviewers'):
+                role = 'reviewer'
+                role_len = 9
+            elif area.endswith('maintainer'):
+                role = 'maintainer'
+                role_len = 10
+            elif area.endswith('maintainers'):
+                role = 'maintainer'
+                role_len = 11
+            else:
+                role = 'unknown'
+                role_len = 0
+
+            sig_name = find_sig(sig_name_list, area)
+
+            if area.startswith('release-engineering'):
+                sig_name = 'sig-release'
+                subproject = 'release-engineering'
+            else:
+                subproject = area[len(sig_name)+1:-role_len-1]
+
+            if 'NA' not in sig_name:
+                #print(area)
+                #print(sig_name, subproject, role)
+                for username in y[1]:
+                    write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict)
+                    #print(username)
+ 
 def build_owners_csv():
 
     # This is the primary function that pulls all of this together.
@@ -107,10 +172,12 @@ def build_owners_csv():
 
     sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')    
     sigs = yaml.safe_load(sig_file)
-    
+   
     csv_file = open('owners_data.csv','w')
     csv_file.write("company,username,status,sig_name,subproject,owners_file\n")
     
+    kk_aliases(sigs, csv_file, affil_dict)
+ 
     # Get list of SIG / WG leads and add them to the csv file
     alias_url = 'https://raw.githubusercontent.com/kubernetes/community/master/OWNERS_ALIASES'
     write_aliases('lead', alias_url, csv_file, affil_dict)
