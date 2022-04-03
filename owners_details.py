@@ -27,7 +27,7 @@ def read_cncf_affiliations():
 
     import json
     
-    filename = download_file('https://raw.githubusercontent.com/cncf/devstats/master/github_users.json')
+    filename = download_file('https://github.com/cncf/devstats/blob/master/github_users.json?raw=true')
     affil_file = json.load(filename)
     
     affil_dict = {}
