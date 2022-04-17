@@ -64,20 +64,35 @@ def read_key(file_name):
     return key
 
 def run_search_query(query, g, owners_rows):
+    """Runs the query against the GitHub search API, appends the results
+       to owners_rows list and returns the list with results.
+    
+    Parameters
+    ----------
+    query : str
+        String formatted as a search query.
+    g : Github object
+    owners_rows: list
+
+    Returns
+    -------
+    owners_rows : list
+    """
     import time
 
+    # Run the search query to get all of the owners files
     output = g.search_code(query=query)
     print("Total number found", output.totalCount)
 
-    #i = 0
+    # Format the results for each owners file to get the full path
+    # Sleep in the loop to avoid secondary rate limit exception
     for owners in output:
         full_path = owners.repository.full_name + '/' + owners.path
         owners_rows.append(full_path)
-        time.sleep(2)
-
-        #if i >= 10:
-            #break
-        #else:
-            #i+=1
+        time.sleep(3)
     
+    # Add an extra sleep before returning to give it more time to
+    # avoid the rate limit exception
+    time.sleep(5)
+
     return owners_rows
