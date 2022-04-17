@@ -6,7 +6,8 @@
 This script is designed to find the path to OWNERS files within Kubernetes
 organizations, but it is generic enough to find any files of a specific
 filename within a specified GitHub org.
-Note: GitHub search API is limited to 1000 files, so this is still missing some OWNERS files.
+Note: The GitHub search API is a little flaky, so it's likely that some
+files are missing.
 
 As input, this script requires that you have a GitHub API token in a file
 called 'gh_key' in this directory.
