@@ -24,7 +24,7 @@ file_name : str
 from datetime import datetime
 from os.path import dirname, join
 from github import Github
-from common_functions import read_key, run_search_query
+from common_functions import read_key, run_search_query, expand_name_df
 
 api_token = read_key('gh_key')
 g = Github(api_token)
@@ -80,6 +80,9 @@ def make_repo_query(after_cursor = None):
                  }
                  nodes { 
                    name
+                   defaultBranchRef {
+                     name 
+                   }
                  }
               }
               }
@@ -89,8 +92,9 @@ def make_repo_query(after_cursor = None):
 
 def get_repo_list(api_token, org_name):
     """Uses the make_repo_query function to run the GraphQL query and
-    returns the results as a dataframe containing one column with the
-    all of the repo names within the org.
+    returns the results as a dataframe containing the default branch 
+    and repo name for all of the repo within the org. Note: default
+    branch is needed to build the url to the file.
     
     Parameters
     ----------
@@ -141,16 +145,20 @@ def get_repo_list(api_token, org_name):
 # Runs the function that gets the repos from the graphQL API
 # and convert the output dataframe to a list of repos.
 repo_info_df = get_repo_list(api_token, org_name)
-repo_list = repo_info_df['name'].tolist()
+#repo_list = repo_info_df['name'].tolist()
+
+repo_info_df = expand_name_df(repo_info_df,'defaultBranchRef','defaultBranch')
 
 owners_rows = []
 
 # Iterate through the list of repos and run a search API query that
 # gets the owners files for each repo.
-for repo_name in repo_list:
+for item in repo_info_df.iterrows():
+    repo_name = item[1]['name']
+    branch_name = item[1]['defaultBranch']
     query = "filename:" + file_name + " repo:" + org_name + "/" + repo_name
     print(query)
-    run_search_query(query, g, owners_rows)
+    owners_rows = run_search_query(query, g, branch_name, owners_rows)
 
 # prepare file and write rows to csv
 
