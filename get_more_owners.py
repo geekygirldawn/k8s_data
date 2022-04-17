@@ -59,6 +59,17 @@ def read_args():
 org_name, file_name = read_args()
 
 def make_repo_query(after_cursor = None):
+    """Creates the query string for the GraphQL API call using after_cursor
+       to handle multiple pages of results.
+    
+    Parameters
+    ----------
+    after_cursor : str
+
+    Returns
+    -------
+    query : str
+    """
     return """query RepoQuery($org_name: String!) {
              organization(login: $org_name) {
                repositories (first: 100 after: AFTER){
@@ -76,15 +87,31 @@ def make_repo_query(after_cursor = None):
     )
 
 def get_repo_list(api_token, org_name):
+    """Uses the make_repo_query function to run the GraphQL query and
+    returns the results as a dataframe containing one column with the
+    all of the repo names within the org.
+    
+    Parameters
+    ----------
+    api_token : str
+    org_name : str
+
+    Returns
+    -------
+    repo_info_df : dataframe
+    """
     import requests
     import json
     import pandas as pd
 
+    # Setting up the variables needed for the API
     url = 'https://api.github.com/graphql'
     headers = {'Authorization': 'token %s' % api_token}
     
     repo_info_df = pd.DataFrame()
 
+    # Initialize the variables needed to page through the results.
+    # and while there are more pages, query a new page of results
     has_next_page = True
     after_cursor = None
 
@@ -92,23 +119,33 @@ def get_repo_list(api_token, org_name):
 
         query = make_repo_query(after_cursor)
 
+        # Pass the variables into the query and run it using the graphQL
+        # API returning a json file
         variables = {"org_name": org_name}
         r = requests.post(url=url, json={'query': query, 'variables': variables}, headers=headers)
         json_data = json.loads(r.text)
 
+        # Convert the json file to a temporary dataframe that is added
+        # to the main dataframe with all of the results to be returned.
         df_temp = pd.DataFrame(json_data['data']['organization']['repositories']['nodes'])
         repo_info_df = pd.concat([repo_info_df, df_temp])
 
+        # Set variables that check for and handle results with 
+        # multiple pages.
         has_next_page = json_data["data"]["organization"]["repositories"]["pageInfo"]["hasNextPage"]
         after_cursor = json_data["data"]["organization"]["repositories"]["pageInfo"]["endCursor"]
         
     return repo_info_df
 
+# Runs the function that gets the repos from the graphQL API
+# and convert the output dataframe to a list of repos.
 repo_info_df = get_repo_list(api_token, org_name)
 repo_list = repo_info_df['name'].tolist()
 
 owners_rows = []
 
+# Iterate through the list of repos and run a search API query that
+# gets the owners files for each repo.
 for repo_name in repo_list:
     query = "filename:" + file_name + " repo:" + org_name + "/" + repo_name
     print(query)
