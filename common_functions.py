@@ -62,3 +62,22 @@ def read_key(file_name):
     with open(file_path, 'r') as kf:
         key = kf.readline().rstrip() # remove newline & trailing whitespace
     return key
+
+def run_search_query(query, g, owners_rows):
+    import time
+
+    output = g.search_code(query=query)
+    print("Total number found", output.totalCount)
+
+    #i = 0
+    for owners in output:
+        full_path = owners.repository.full_name + '/' + owners.path
+        owners_rows.append(full_path)
+        time.sleep(1)
+
+        #if i >= 10:
+            #break
+        #else:
+            #i+=1
+    
+    return owners_rows
