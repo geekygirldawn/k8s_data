@@ -73,7 +73,7 @@ def run_search_query(query, g, owners_rows):
     for owners in output:
         full_path = owners.repository.full_name + '/' + owners.path
         owners_rows.append(full_path)
-        time.sleep(1)
+        time.sleep(2)
 
         #if i >= 10:
             #break
