@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-# Copyright (C) 2019 Dawn M. Foster
+# Copyright (C) 2022 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 """
 This script is designed to find the path to OWNERS files within Kubernetes
@@ -20,9 +20,10 @@ file_name : str
 
 """
 
-import time
+from datetime import datetime
+from os.path import dirname, join
 from github import Github
-from common_functions import read_key
+from common_functions import read_key, run_search_query
 
 api_token = read_key('gh_key')
 g = Github(api_token)
@@ -57,15 +58,73 @@ def read_args():
 
 org_name, file_name = read_args()
 
-query = "org:" + org_name + " filename:" + file_name
-print(query)
+def make_repo_query(after_cursor = None):
+    return """query RepoQuery($org_name: String!) {
+             organization(login: $org_name) {
+               repositories (first: 100 after: AFTER){
+                 pageInfo {
+                   hasNextPage
+                   endCursor
+                 }
+                 nodes { 
+                   name
+                 }
+              }
+              }
+            }""".replace(
+        "AFTER", '"{}"'.format(after_cursor) if after_cursor else "null"
+    )
 
-output = g.search_code(query=query, order='asc')
-print("Total number found", output.totalCount)
+def get_repo_list(api_token, org_name):
+    import requests
+    import json
+    import pandas as pd
 
-import time
+    url = 'https://api.github.com/graphql'
+    headers = {'Authorization': 'token %s' % api_token}
+    
+    repo_info_df = pd.DataFrame()
 
-for owners in output:
-    full_path = owners.repository.full_name + '/' + owners.path
-    print(full_path)
-    time.sleep(1)
+    has_next_page = True
+    after_cursor = None
+
+    while has_next_page:
+
+        query = make_repo_query(after_cursor)
+
+        variables = {"org_name": org_name}
+        r = requests.post(url=url, json={'query': query, 'variables': variables}, headers=headers)
+        json_data = json.loads(r.text)
+
+        df_temp = pd.DataFrame(json_data['data']['organization']['repositories']['nodes'])
+        repo_info_df = pd.concat([repo_info_df, df_temp])
+
+        has_next_page = json_data["data"]["organization"]["repositories"]["pageInfo"]["hasNextPage"]
+        after_cursor = json_data["data"]["organization"]["repositories"]["pageInfo"]["endCursor"]
+        
+    return repo_info_df
+
+repo_info_df = get_repo_list(api_token, org_name)
+repo_list = repo_info_df['name'].tolist()
+
+owners_rows = []
+
+for repo_name in repo_list:
+    query = "filename:" + file_name + " repo:" + org_name + "/" + repo_name
+    print(query)
+    run_search_query(query, g, owners_rows)
+
+# prepare file and write rows to csv
+
+try:
+    today = datetime.today().strftime('%Y-%m-%d')
+    output_filename = "./output/" + org_name + "_" + file_name + "_" + today + ".csv"
+    current_dir = dirname(__file__)
+    file_path = join(current_dir, output_filename)
+    #file = open(file_path, 'w', newline ='')
+
+    with open(file_path, 'w') as file:    
+        file.writelines("%s\n" % item for item in owners_rows)
+
+except:
+    print('Could not write to csv file. This may be because the output directory is missing or you do not have permissions to write to it. Exiting')
