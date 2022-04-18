@@ -1,28 +1,17 @@
-# Copyright (C) 2019 Dawn M. Foster
+# Copyright (C) 2019-2022 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
-from numpy import full
+def download_file(url):
 
+    # Takes a URL and downloads the contents of the file into a var to be used by other functions
 
-def download_file(url,output_file):
+    # NOTE: Make sure you pass in a raw yaml file, not html.
+    # Example: sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
 
-    # Usage:
-    # sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml', '/tmp/sigs.yaml')
-
-    import wget
-    import os
-    import shutil
-    import random
+    import urllib.request
     
-    output_bak = output_file + '_bak_' + str(random.randint(0,1024))
+    sig_file = urllib.request.urlopen(url)
 
-    if os.path.exists(output_file):
-        shutil.move(output_file, output_bak)
-
-    print("Downloading", url, "to file", output_file)
-
-    sig_file = wget.download(url, out=output_file)
-    
     return sig_file
 
 def read_sig_yaml(sig_file):
