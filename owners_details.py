@@ -3,19 +3,31 @@
 # Copyright (C) 2019-2022 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
-# Note: This only uses a subset of k8s OWNERS files. 
-# Uses the owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
+"""
+Note: By default this only looks at a subset of k8s OWNERS files. 
+Uses the owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
+You can also provide as a command line argument, the full path to an 
+additional list of owners files to use that you can generate using
+get_more_owners.py.
 
-
-from common_functions import files_done
+Parameters
+----------
+new_owners_file : str
+    Full path to a file containing a list of owners files
+"""
 
 
 def read_cncf_affiliations():
-    
+    """    
     # Download the contents of the CNCF json file and create an affiliation dictionary indexed
     # by GitHub username to make finding affilions faster for later functions.
     # Includes only current affiliation and excludes robot accounts.
-
+    
+    Returns
+    -------
+    affil_dict : dict
+        Contains a mapping of github username to affiliation
+    """
     import json
     from common_functions import download_file
     
@@ -43,11 +55,11 @@ def read_cncf_affiliations():
     return affil_dict
     
 def write_aliases(role, alias_url, csv_file, affil_dict):
-
-    # Takes OWNERS_ALIASES file with details about SIG/WG leadership and
-    # writes those details to the csv file with role of 'lead' and NA
-    # for subproject.
-     
+    """
+    Takes OWNERS_ALIASES file with details about SIG/WG leadership and
+    writes those details to the csv file with role of 'lead' and NA
+    for subproject.
+     """
     import yaml
     from common_functions import download_file, write_affil_line
 
@@ -138,16 +150,27 @@ def kk_aliases(sigs, csv_file, affil_dict):
                     write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict)
  
 def build_owners_csv():
+    """This is the primary function that pulls all of this together.
+        It gets the list of OWNERS files from sigs.yaml, downloads the 
+        content of each OWNERS file, and writes details about owners to a
+        csv file which is dropped into an output directory.
 
-    # This is the primary function that pulls all of this together.
-    # It gets the list of OWNERS files from sigs.yaml, downloads the 
-    # content of each OWNERS file, and writes details about owners to a
-    # csv file which is dropped into the current directory.
-  
+        It also reads an optional command line argument from the main program 
+        containing the full path to a file with additional owners files
+    
+    """
     import yaml
+    import sys
     import csv
     from datetime import datetime
     from common_functions import download_file, read_owners_file, files_done
+
+    # read additional owners file from command line if available
+    try:
+        new_owners_file = str(sys.argv[1])
+        additional_owners = True
+    except:
+        additional_owners = False
 
     affil_dict = read_cncf_affiliations()
 
@@ -178,18 +201,12 @@ def build_owners_csv():
     csv_file.close()
 
     # Gather data from an additional list of OWNERS files if available
-    # REPLACE THIS with argument from command line
-    additional_owners = True
 
     if additional_owners == True:
         # Open output csv from earlier for reading and close it again before writing to it
         csv_file = open(outfile_name,'r')
         files_doneDF = files_done(csv_file)
-        print(files_doneDF)
         csv_file.close()
-
-        # REPLACE THIS with argument from command line
-        new_owners_file = '/Users/fosterd/gitrepos/k8s_data/output/test_owners.csv'
 
         # Open csv with new list of owners files
         with open(new_owners_file, newline='') as f:
@@ -200,6 +217,7 @@ def build_owners_csv():
 
         for owners_url_list in new_owners_list:
             owners_url = owners_url_list[0]
+            # Only process owners files that weren't done in one of the above steps
             if files_doneDF['owners_file'].str.contains(owners_url).any() == False:
                 sig_name = 'NA'
                 subproject = 'NA'
