@@ -177,13 +177,16 @@ def build_owners_csv():
     # csv file which is dropped into the current directory.
   
     import yaml
+    from datetime import datetime
 
     affil_dict = read_cncf_affiliations()
 
     sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')    
     sigs = yaml.safe_load(sig_file)
    
-    csv_file = open('owners_data.csv','w')
+    today = datetime.today().strftime('%Y-%m-%d')
+    outfile_name = 'output/owners_data_' + today + '.csv'
+    csv_file = open(outfile_name,'w')
     csv_file.write("company,username,status,sig_name,subproject,owners_file\n")
     
     kk_aliases(sigs, csv_file, affil_dict)
