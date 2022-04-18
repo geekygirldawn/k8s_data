@@ -167,7 +167,6 @@ try:
     output_filename = "./output/" + org_name + "_" + file_name + "_" + today + ".csv"
     current_dir = dirname(__file__)
     file_path = join(current_dir, output_filename)
-    #file = open(file_path, 'w', newline ='')
 
     with open(file_path, 'w') as file:    
         file.writelines("%s\n" % item for item in owners_rows)
