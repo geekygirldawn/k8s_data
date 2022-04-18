@@ -14,6 +14,7 @@ def read_cncf_affiliations():
     # Includes only current affiliation and excludes robot accounts.
 
     import json
+    from common_functions import download_file
     
     filename = download_file('https://github.com/cncf/devstats/blob/master/github_users.json?raw=true')
     affil_file = json.load(filename)
@@ -37,32 +38,6 @@ def read_cncf_affiliations():
             affiliation = 'N/A'
             
     return affil_dict
-
-def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict):
-    
-    # Writes a single line to the csv file with data about owners, including
-    # SIG/WG, subproject (if applicable), affiliation, owners url
-
-    # Make sure username is lower case before checking affiliation
-    username = username.lower()
-
-    # Only print real users to the csv file. Need to filter out aliases.
-    ban = ['approve', 'review', 'maintain', 'leads', 'sig-', 'admins', 'release', 'licensing', 'managers', 'owners', 'committee', 'steering']
-
-    flag = 1
-    for b in ban:
-        if b in username:
-            flag = 0
-    if flag == 1:
-        if username in affil_dict:
-            affil = affil_dict[username]
-            if affil == '?':
-                affil = 'NotFound'
-        else:
-            affil = 'NotFound'
-
-        line = ",".join([affil, username, role, sig_name, subproject, owners_url]) + "\n"
-        csv_file.write(line)
     
 def write_aliases(role, alias_url, csv_file, affil_dict):
 
@@ -71,7 +46,7 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
     # for subproject.
      
     import yaml
-    from common_functions import download_file
+    from common_functions import download_file, write_affil_line
 
     alias_file = download_file(alias_url)
     aliases = yaml.safe_load(alias_file)
@@ -116,7 +91,7 @@ def kk_aliases(sigs, csv_file, affil_dict):
     # Then it grabs org affiliation and other data before saving it to the CSV file.
 
     import yaml
-    from common_functions import download_file
+    from common_functions import download_file, write_affil_line
 
     sig_name_list = get_sig_list(sigs)
 
@@ -168,7 +143,7 @@ def build_owners_csv():
   
     import yaml
     from datetime import datetime
-    from common_functions import download_file
+    from common_functions import download_file, read_owners_file
 
     affil_dict = read_cncf_affiliations()
 
@@ -195,28 +170,7 @@ def build_owners_csv():
             for owners_url in y['owners']:
                 subproject = y['name']
     
-                # Download contents of owners files and load them. Print error message for files that 404
-                try:
-                    owners_file = download_file(owners_url)
-                    #stream = open(owners_file, 'r')
-                    #owners = yaml.safe_load(stream)
-                    owners = yaml.safe_load(owners_file)
-                    
-                except:
-                    print("Cannot get", sig_name, owners_url)
-
-                # Wrapped with 'try' since not every owners file has approvers and reviewers. 
-                try:
-                    for username in owners['approvers']:
-                        write_affil_line(username, 'approver', sig_name, subproject, owners_url, csv_file, affil_dict)
-                except:
-                    pass
-                            
-                try: 
-                    for username in owners['reviewers']:
-                        write_affil_line(username, 'reviewer', sig_name, subproject, owners_url, csv_file, affil_dict)
-                except:
-                    pass
+                read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict)
                 
     csv_file.close()   
     

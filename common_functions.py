@@ -30,6 +30,59 @@ def process_sig_yaml():
 
     return sigs_wgs
 
+def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict):
+    
+    # Writes a single line to the csv file with data about owners, including
+    # SIG/WG, subproject (if applicable), affiliation, owners url
+
+    # Make sure username is lower case before checking affiliation
+    username = username.lower()
+
+    # Only print real users to the csv file. Need to filter out aliases.
+    ban = ['approve', 'review', 'maintain', 'leads', 'sig-', 'admins', 'release', 'licensing', 'managers', 'owners', 'committee', 'steering']
+
+    flag = 1
+    for b in ban:
+        if b in username:
+            flag = 0
+    if flag == 1:
+        if username in affil_dict:
+            affil = affil_dict[username]
+            if affil == '?':
+                affil = 'NotFound'
+        else:
+            affil = 'NotFound'
+
+        line = ",".join([affil, username, role, sig_name, subproject, owners_url]) + "\n"
+        csv_file.write(line)
+        
+def read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict):
+    # Download contents of owners files and load them. Print error message for files that 404
+    
+    import yaml
+
+    try:
+        owners_file = download_file(owners_url)
+        #stream = open(owners_file, 'r')
+        #owners = yaml.safe_load(stream)
+        owners = yaml.safe_load(owners_file)
+        
+    except:
+        print("Cannot get", sig_name, owners_url)
+
+    # Wrapped with 'try' since not every owners file has approvers and reviewers. 
+    try:
+        for username in owners['approvers']:
+            write_affil_line(username, 'approver', sig_name, subproject, owners_url, csv_file, affil_dict)
+    except:
+        pass
+                
+    try: 
+        for username in owners['reviewers']:
+            write_affil_line(username, 'reviewer', sig_name, subproject, owners_url, csv_file, affil_dict)
+    except:
+        pass
+
 def read_key(file_name):
     """Retrieves a GitHub API key from a file.
     
