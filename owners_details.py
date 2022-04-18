@@ -7,6 +7,9 @@
 # Uses the owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
 
 
+from common_functions import files_done
+
+
 def read_cncf_affiliations():
     
     # Download the contents of the CNCF json file and create an affiliation dictionary indexed
@@ -142,8 +145,9 @@ def build_owners_csv():
     # csv file which is dropped into the current directory.
   
     import yaml
+    import csv
     from datetime import datetime
-    from common_functions import download_file, read_owners_file
+    from common_functions import download_file, read_owners_file, files_done
 
     affil_dict = read_cncf_affiliations()
 
@@ -171,8 +175,37 @@ def build_owners_csv():
                 subproject = y['name']
     
                 read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict)
-                
-    csv_file.close()   
+    csv_file.close()
+
+    # Gather data from an additional list of OWNERS files if available
+    # REPLACE THIS with argument from command line
+    additional_owners = True
+
+    if additional_owners == True:
+        # Open output csv from earlier for reading and close it again before writing to it
+        csv_file = open(outfile_name,'r')
+        files_doneDF = files_done(csv_file)
+        print(files_doneDF)
+        csv_file.close()
+
+        # REPLACE THIS with argument from command line
+        new_owners_file = '/Users/fosterd/gitrepos/k8s_data/output/test_owners.csv'
+
+        # Open csv with new list of owners files
+        with open(new_owners_file, newline='') as f:
+            new_owners_list = list(csv.reader(f))
+
+        #re-open original output file to append data from new owners files
+        csv_file = open(outfile_name,'a')
+
+        for owners_url_list in new_owners_list:
+            owners_url = owners_url_list[0]
+            if files_doneDF['owners_file'].str.contains(owners_url).any() == False:
+                sig_name = 'NA'
+                subproject = 'NA'
+                read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict)
+        
+        csv_file.close()
     
 build_owners_csv()
         

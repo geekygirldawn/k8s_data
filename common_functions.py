@@ -39,7 +39,7 @@ def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file,
     username = username.lower()
 
     # Only print real users to the csv file. Need to filter out aliases.
-    ban = ['approve', 'review', 'maintain', 'leads', 'sig-', 'admins', 'release', 'licensing', 'managers', 'owners', 'committee', 'steering']
+    ban = ['approve', 'review', 'maintain', 'provider', 'leads', 'sig-', 'admins', 'release', 'licensing', 'github-admin-team', 'test-infra-oncall', 'managers', 'owners', 'committee', 'steering']
 
     flag = 1
     for b in ban:
@@ -55,7 +55,7 @@ def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file,
 
         line = ",".join([affil, username, role, sig_name, subproject, owners_url]) + "\n"
         csv_file.write(line)
-        
+
 def read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict):
     # Download contents of owners files and load them. Print error message for files that 404
     
@@ -72,6 +72,16 @@ def read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict):
 
     # Wrapped with 'try' since not every owners file has approvers and reviewers. 
     try:
+        for label in owners['labels']:
+                label_spl = label.split('/')
+                if subproject == 'NA' and label_spl[0] == 'area':
+                    subproject = label_spl[1]
+                elif sig_name == 'NA' and label_spl[0] == 'sig':
+                    sig_name = 'sig-' + label_spl[1]
+    except:
+        pass
+
+    try:
         for username in owners['approvers']:
             write_affil_line(username, 'approver', sig_name, subproject, owners_url, csv_file, affil_dict)
     except:
@@ -82,6 +92,12 @@ def read_owners_file(owners_url, sig_name, subproject, csv_file, affil_dict):
             write_affil_line(username, 'reviewer', sig_name, subproject, owners_url, csv_file, affil_dict)
     except:
         pass
+
+def files_done(owners_file_csv):
+    import pandas as pd
+
+    files_doneDF = pd.read_csv(owners_file_csv)
+    return files_doneDF
 
 def read_key(file_name):
     """Retrieves a GitHub API key from a file.
