@@ -1,23 +1,11 @@
 #!/usr/local/bin/python3
 
-# Copyright (C) 2019 Dawn M. Foster
+# Copyright (C) 2019-2022 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
 # Note: This only uses a subset of k8s OWNERS files. 
 # Uses the owners files found in sigs.yaml plus the OWNERS_ALIASES file containing leads
 
-def download_file(url):
-
-    # Takes a URL and downloads the contents of the file into a var to be used by other functions
-
-    # NOTE: Make sure you pass in a raw yaml file, not html.
-    # Example: sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
-
-    import urllib.request
-    
-    sig_file = urllib.request.urlopen(url)
-
-    return sig_file
 
 def read_cncf_affiliations():
     
@@ -83,6 +71,7 @@ def write_aliases(role, alias_url, csv_file, affil_dict):
     # for subproject.
      
     import yaml
+    from common_functions import download_file
 
     alias_file = download_file(alias_url)
     aliases = yaml.safe_load(alias_file)
@@ -127,6 +116,7 @@ def kk_aliases(sigs, csv_file, affil_dict):
     # Then it grabs org affiliation and other data before saving it to the CSV file.
 
     import yaml
+    from common_functions import download_file
 
     sig_name_list = get_sig_list(sigs)
 
@@ -178,6 +168,7 @@ def build_owners_csv():
   
     import yaml
     from datetime import datetime
+    from common_functions import download_file
 
     affil_dict = read_cncf_affiliations()
 
