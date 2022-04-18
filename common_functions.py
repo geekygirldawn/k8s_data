@@ -1,6 +1,9 @@
 # Copyright (C) 2019 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
+from numpy import full
+
+
 def download_file(url,output_file):
 
     # Usage:
@@ -63,7 +66,7 @@ def read_key(file_name):
         key = kf.readline().rstrip() # remove newline & trailing whitespace
     return key
 
-def run_search_query(query, g, owners_rows):
+def run_search_query(query, g, branch_name, owners_rows):
     """Runs the query against the GitHub search API, appends the results
        to owners_rows list and returns the list with results.
     
@@ -72,6 +75,8 @@ def run_search_query(query, g, owners_rows):
     query : str
         String formatted as a search query.
     g : Github object
+    branch_name : str
+        Default branch name from the API to use to build the URL
     owners_rows: list
 
     Returns
@@ -84,15 +89,51 @@ def run_search_query(query, g, owners_rows):
     output = g.search_code(query=query)
     print("Total number found", output.totalCount)
 
-    # Format the results for each owners file to get the full path
+    # Format the results for each owners file to get the full path as a url
     # Sleep in the loop to avoid secondary rate limit exception
     for owners in output:
-        full_path = owners.repository.full_name + '/' + owners.path
+        full_path = 'https://raw.githubusercontent.com/' + owners.repository.full_name + '/' + branch_name + '/' + owners.path
         owners_rows.append(full_path)
-        time.sleep(3)
+        time.sleep(5)
     
     # Add an extra sleep before returning to give it more time to
     # avoid the rate limit exception
-    time.sleep(5)
+    time.sleep(60)
 
     return owners_rows
+
+def expand_name_df(df,old_col,new_col):
+    """Takes a dataframe df with an API JSON object with nested elements in old_col, 
+    extracts the name, and saves it in a new dataframe column called new_col
+
+    Parameters
+    ----------
+    df : dataframe
+    old_col : str
+    new_col : str
+
+    Returns
+    -------
+    df : dataframe
+    """
+    
+    import pandas as pd
+
+    def expand_name(nested_name):
+        """Takes an API JSON object with nested elements and extracts the name
+        Parameters
+        ----------
+        nested_name : JSON API object
+
+        Returns
+        -------
+        object_name : str
+        """
+        if pd.isnull(nested_name):
+            object_name = 'Likely Missing'
+        else:
+            object_name = nested_name['name']
+        return object_name
+
+    df[new_col] = df[old_col].apply(expand_name)
+    return df
