@@ -127,7 +127,7 @@ def build_owners_csv():
     from datetime import datetime
     from common_functions import download_file, read_owners_file, files_done
     from common_functions import read_cncf_affiliations
-    
+
     # read additional owners file from command line if available
     try:
         new_owners_file = str(sys.argv[1])
@@ -140,9 +140,17 @@ def build_owners_csv():
     sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')    
     sigs = yaml.safe_load(sig_file)
    
+    # Open the CSV file for writing and write the license and header lines
     today = datetime.today().strftime('%Y-%m-%d')
     outfile_name = 'output/owners_data_' + today + '.csv'
     csv_file = open(outfile_name,'w')
+
+    csv_file.write("License: Creative Commons Attribution-ShareAlike 4.0 International License\n")
+    csv_file.write("License Link: http://creativecommons.org/licenses/by-sa/4.0/\n")
+    csv_file.write("Author: Dr. Dawn M. Foster\n")
+    csv_file.write("Status: Updated on April 18 2022\n")
+    csv_file.write("Source URL: https://github.com/geekygirldawn/k8s_data/datasets\n\n")
+
     csv_file.write("company,username,status,sig_name,subproject,owners_file\n")
     
     kk_aliases(sigs, csv_file, affil_dict)
