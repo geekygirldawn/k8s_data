@@ -15,44 +15,6 @@ Parameters
 new_owners_file : str
     Full path to a file containing a list of owners files
 """
-
-
-def read_cncf_affiliations():
-    """    
-    # Download the contents of the CNCF json file and create an affiliation dictionary indexed
-    # by GitHub username to make finding affilions faster for later functions.
-    # Includes only current affiliation and excludes robot accounts.
-    
-    Returns
-    -------
-    affil_dict : dict
-        Contains a mapping of github username to affiliation
-    """
-    import json
-    from common_functions import download_file
-    
-    filename = download_file('https://github.com/cncf/devstats/blob/master/github_users.json?raw=true')
-    affil_file = json.load(filename)
-    
-    affil_dict = {}
-    
-    for item in affil_file:
-        # Force username to lower case for consistent affiliation checks
-        username = item['login'].lower()
-        
-        try:
-            affiliation = item['affiliation']
-        
-            if '(Robots)' not in affiliation:
-                if ',' in affiliation: # get only current affiliation
-                    affil_dict[username] = affiliation.rsplit(',', 1)[1].strip()
-                else:
-                    affil_dict[username] = affiliation
-                
-        except:
-            affiliation = 'N/A'
-            
-    return affil_dict
     
 def write_aliases(role, alias_url, csv_file, affil_dict):
     """
@@ -164,7 +126,8 @@ def build_owners_csv():
     import csv
     from datetime import datetime
     from common_functions import download_file, read_owners_file, files_done
-
+    from common_functions import read_cncf_affiliations
+    
     # read additional owners file from command line if available
     try:
         new_owners_file = str(sys.argv[1])
