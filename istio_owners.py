@@ -38,7 +38,7 @@ csv_file.write("License: Creative Commons Attribution-ShareAlike 4.0 Internation
 csv_file.write("License Link: http://creativecommons.org/licenses/by-sa/4.0/\n")
 csv_file.write("Author: Dr. Dawn M. Foster\n")
 csv_file.write("Status: Updated on April 18 2022\n")
-csv_file.write("Source URL: https://github.com/geekygirldawn/k8s_data/datasets\n")
+csv_file.write("Source URL: https://github.com/geekygirldawn/k8s_data/datasets\n\n")
 
 csv_file.write("company,username,team\n")
     
