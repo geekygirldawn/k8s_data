@@ -37,7 +37,26 @@ def read_cncf_affiliations():
             affiliation = 'N/A'
             
     return affil_dict
-    
+
+def get_affil(affil_dict, username, api_token):
+    from github import Github
+
+    g = Github(api_token)
+
+    affil = 'NotFound'
+    if username in affil_dict:
+        affil = affil_dict[username]
+    if affil == '?':
+        affil = 'NotFound'
+    if affil == 'NotFound':
+        try:
+            affil = g.get_user(username).company
+        except:
+            affil = 'NotFound'
+    if affil == None:
+        affil = 'NotFound'
+    return affil
+
 def download_file(url):
 
     # Takes a URL and downloads the contents of the file into a var to be used by other functions
@@ -66,6 +85,14 @@ def process_sig_yaml():
     sigs_wgs = read_sig_yaml(sig_file)
 
     return sigs_wgs
+
+def write_affil_line_istio (username, team, affil_dict, api_token, csv_file):
+
+    affil = get_affil(affil_dict, username, api_token)
+    if affil == None or affil == '':
+        affil = 'NotFound'
+    line = ",".join([affil, username, team]) + "\n"
+    csv_file.write(line)
 
 def write_affil_line(username, role, sig_name, subproject, owners_url, csv_file, affil_dict):
     
