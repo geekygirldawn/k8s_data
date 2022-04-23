@@ -3,3 +3,5 @@ __pycache__/
 output/*.csv
 *.pyc
 gh_key
+.DS_Store
+.ipynb_checkpoints/
