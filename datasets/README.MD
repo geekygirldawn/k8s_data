@@ -32,6 +32,8 @@ This dataset uses the Istio [teams.yaml](https://raw.githubusercontent.com/istio
 
 **[owners_data_istio_2022-04-22.csv](owners_data_istio_2022-04-22.csv)**
 
+There is a [Jupyter Notebook](Istio_Leadership_Analysis.ipynb) with some basic analysis using this Istio dataset.
+
 ### Generating updates
 
 You can run the `istio_owners.py` program in this repo to generate your own, up to date dataset.
