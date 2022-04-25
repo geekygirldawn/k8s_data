@@ -60,7 +60,14 @@ def get_affil(affil_dict, username, api_token):
 
     affil = 'NotFound'
     if username in affil_dict:
-        affil = affil_dict[username]
+        # If affiliation is listed on GH, use that instead as more
+        # likely up to date
+        try:
+            affil = g.get_user(username).company
+            if affil == None:
+                affil = affil_dict[username]
+        except:
+            pass
     if affil == '?':
         affil = 'NotFound'
     if affil == 'NotFound':
@@ -70,6 +77,8 @@ def get_affil(affil_dict, username, api_token):
             affil = 'NotFound'
     if affil == None:
         affil = 'NotFound'
+    # remove any commas from the company name
+    affil = affil.replace(",","")
     return affil
 
 def download_file(url):
