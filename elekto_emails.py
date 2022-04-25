@@ -2,6 +2,15 @@
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
 """
+Before using this script, please make sure that you are adhering 
+to the GitHub Acceptable Use Policies:
+https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies
+In particular, "You may not use information from the Service 
+(whether scraped, collected through our API, or obtained otherwise)
+for spamming purposes, including for the purposes of sending unsolicited
+emails to users or selling User Personal Information (as defined in the
+GitHub Privacy Statement), such as to recruiters, headhunters, and job boards."
+
 Takes an elekto voters.yaml file with a list of "eligible_voters:"
 GitHub logins, and attempts to use the GitHub API to get an email
 for each person to make it possible to send email reminders to eligible
@@ -149,7 +158,6 @@ found_count = 0
 # append it to the list and increment the counter.
 for username in voter_list:
     email = get_email(org_name, username)
-    print(username, email)
     if email:
         email_list.append(email)
         found_count+=1
