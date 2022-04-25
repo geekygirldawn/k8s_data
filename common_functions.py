@@ -39,9 +39,9 @@ def read_cncf_affiliations():
     return affil_dict
 
 def get_affil(affil_dict, username, api_token):
-    """Get the company affiliation for a username from the CNCF gitdm
-    data if available. The GitHub API company field for a user is a secondary
-    source of this data.
+    """Get the company affiliation for a username starting with the 
+    GitHub API, since that's likely the most up to date source. The CNCF gitdm
+    data is used a secondary source of this data.
     Parameters
     ----------
     affil_dict : dict
