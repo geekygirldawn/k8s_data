@@ -1,0 +1,290 @@
+License: Creative Commons Attribution-ShareAlike 4.0 International License
+License Link: http://creativecommons.org/licenses/by-sa/4.0/
+Author: Dr. Dawn M. Foster
+Status: Updated on April 18 2022
+Source URL: https://github.com/geekygirldawn/k8s_data/datasets
+
+company,username,team
+Google,adammil2000,Maintainers
+Google,andraxylia,Maintainers
+Clickhouse,bianpengyuan,Maintainers
+Red Hat Inc.,brian-avery,Maintainers
+Red Hat,clyang82,Maintainers
+Google LLC,costinm,Maintainers
+Red Hat,dgn,Maintainers
+Google,diemtvu,Maintainers
+@google ,douglas-reid,Maintainers
+Aviatrix,duderino,Maintainers
+Google LLC,elfinhe,Maintainers
+IBM,ericvn,Maintainers
+IBM @ibm-research and Red Hat partner engineer,esnible,Maintainers
+Google,fejta,Maintainers
+Huawei Technologies Co. Ltd,fleeto,Maintainers
+Aviatrix,fpesce,Maintainers
+IBM,frankbu,Maintainers
+Google LLC,gargnupur,Maintainers
+@RedHatOfficial,gbaufake,Maintainers
+Solo.io,GregHanson,Maintainers
+NotFound,hanxiaop,Maintainers
+Google,howardjohn,Maintainers
+Huawei Technologies Co. Ltd,hzxuzhonghu,Maintainers
+Google LLC,incfly,Maintainers
+@Intel,irisdingbj,Maintainers
+@aspenmesh ,jacob-delgado,Maintainers
+@statsig-io,jasonwzm,Maintainers
+Google,JimmyCYJ,Maintainers
+Cisco System,john-a-joyce,Maintainers
+IBM,johnma14,Maintainers
+Red Hat,jwendell,Maintainers
+DaoCloud,kebe7jun,Maintainers
+@google ,kyessenov,Maintainers
+Google,lambdai,Maintainers
+@tetrateio,liamawhite,Maintainers
+Google LLC,liminw,Maintainers
+Solo.io,linsun,Maintainers
+@tetrateio,lizan,Maintainers
+Beijing Enterprises Sanxing,loverto,Maintainers
+ex-google,mandarjog,Maintainers
+Red Hat,morvencao,Maintainers
+Google Inc.,myidpt,Maintainers
+SUSE,Nino-K,Maintainers
+Google,nmittler,Maintainers
+@istio @solo-io,nrjpoddar,Maintainers
+Google,ostromart,Maintainers
+Salesforce.com inc.,ramaraochavali,Maintainers
+Google LLC,rcaballeromx,Maintainers
+Red Hat Inc.,rcernich,Maintainers
+@google ,richardwxn,Maintainers
+Google LLC,rlenglet,Maintainers
+@Tetrateio,rootsongjc,Maintainers
+@google,rshriram,Maintainers
+@Alibaba @kubernetes @istio  @servicemesher,SataQiu,Maintainers
+Cisco Systems,sbezverk,Maintainers
+International Business Machines Corporation,sdake,Maintainers
+VMware,shamsher31,Maintainers
+Google LLC,stewartbutler,Maintainers
+NotFound,suryadu,Maintainers
+@Google,therealmitchconnors,Maintainers
+Cisco Systems Inc.,tiswanso,Maintainers
+@stripe,venilnoronha,Maintainers
+@Tencent,Xunzhuo,Maintainers
+Google,yangminzhu,Maintainers
+@google ,yxue,Maintainers
+Intel Corporation,zhlsunshine,Maintainers
+Red Hat Inc.,brian-avery,Release Managers
+Red Hat,dgn,Release Managers
+IBM,ericvn,Release Managers
+Aviatrix,fpesce,Release Managers
+Google,howardjohn,Release Managers
+@Intel,irisdingbj,Release Managers
+@aspenmesh ,jacob-delgado,Release Managers
+Google,JimmyCYJ,Release Managers
+IBM,johnma14,Release Managers
+Red Hat,jwendell,Release Managers
+@Stripe,Mythra,Release Managers
+Google LLC,rlenglet,Release Managers
+International Business Machines Corporation,sdake,Release Managers
+Google,howardjohn,Repo Admins
+Istio,istio-policy-bot,Repo Admins
+Istio,istio-release-robot,Repo Admins
+Istio,istio-testing,Repo Admins
+Solo.io,linsun,Repo Admins
+@istio @solo-io,nrjpoddar,Repo Admins
+Google,ameer00,Steering Committee
+NotFound,angaluri,Steering Committee
+IBM Corp,CloudJason,Steering Committee
+Google LLC,craigbox,Steering Committee
+Huawei Technologies Co. Ltd,hzxuzhonghu,Steering Committee
+@Intel,irisdingbj,Steering Committee
+DaoCloud,kebe7jun,Steering Committee
+Solo.io,linsun,Steering Committee
+Google,louiscryan,Steering Committee
+Red Hat Inc.,rcernich,Steering Committee
+@google,thisisnotapril,Steering Committee
+@tetrateio,ZackButcher,Steering Committee
+IBM,ericvn,Technical Oversight Committee
+Google,howardjohn,Technical Oversight Committee
+Solo.io,linsun,Technical Oversight Committee
+Google,louiscryan,Technical Oversight Committee
+@istio @solo-io,nrjpoddar,Technical Oversight Committee
+@google,smawson,Technical Oversight Committee
+Aviatrix,fpesce,Triagers
+@istio @google,jasminejaksic,Triagers
+@google ,douglas-reid,Working Group Leads
+IBM,ericvn,Working Group Leads
+IBM @ibm-research and Red Hat partner engineer,esnible,Working Group Leads
+IBM,frankbu,Working Group Leads
+Google,howardjohn,Working Group Leads
+@aspenmesh ,jacob-delgado,Working Group Leads
+Google LLC,liminw,Working Group Leads
+Solo.io,linsun,Working Group Leads
+@tetrateio,lizan,Working Group Leads
+ex-google,mandarjog,Working Group Leads
+Google,Monkeyanator,Working Group Leads
+Google Inc.,myidpt,Working Group Leads
+@istio @solo-io,nrjpoddar,Working Group Leads
+@Google,stevenctl,Working Group Leads
+digital.ai,dcberg,enhancements-maintainers
+Apple Inc.,jdumars,enhancements-maintainers
+Solo.io,linsun,enhancements-maintainers
+Google,louiscryan,enhancements-maintainers
+Google LLC,chaodaig,Operations Maintainers
+Google,chases2,Operations Maintainers
+Google,cjwagner,Operations Maintainers
+Google,fejta,Operations Maintainers
+Google,listx,Operations Maintainers
+Google LLC,michelle192837,Operations Maintainers
+Google LLC,mpherman2,Operations Maintainers
+@statsig-io,jasonwzm,WG - Config Maintainers
+Google,nmittler,WG - Config Maintainers
+Google,adammil2000,WG - Docs Maintainers
+Google LLC,craigbox,WG - Docs Maintainers
+Google,davidhauck,WG - Docs Maintainers
+IBM,ericvn,WG - Docs Maintainers
+Huawei Technologies Co. Ltd,fleeto,WG - Docs Maintainers
+IBM,frankbu,WG - Docs Maintainers
+@RedHatOfficial,gbaufake,WG - Docs Maintainers
+DaoCloud,kebe7jun,WG - Docs Maintainers
+Beijing Enterprises Sanxing,loverto,WG - Docs Maintainers
+Google LLC,rcaballeromx,WG - Docs Maintainers
+@Tetrateio,rootsongjc,WG - Docs Maintainers
+@Alibaba @kubernetes @istio  @servicemesher,SataQiu,WG - Docs Maintainers
+Google LLC,craigbox,WG - Docs  Maintainers/English
+IBM,ericvn,WG - Docs  Maintainers/English
+IBM,frankbu,WG - Docs  Maintainers/English
+Aviatrix,knrc,WG - Docs  Maintainers/English
+Google,louiscryan,WG - Docs  Maintainers/English
+Google,nmittler,WG - Docs  Maintainers/English
+Salesforce,pnambiarsf,WG - Docs  Maintainers/English
+Solo.io,rvennam,WG - Docs  Maintainers/English
+@google,smawson,WG - Docs  Maintainers/English
+Google,ssuchter,WG - Docs  Maintainers/English
+Google LLC,craigbox,WG - Docs Maintainers/Chinese
+IBM,ericvn,WG - Docs Maintainers/Chinese
+Huawei Technologies Co. Ltd,fleeto,WG - Docs Maintainers/Chinese
+DaoCloud,kebe7jun,WG - Docs Maintainers/Chinese
+Beijing Enterprises Sanxing,loverto,WG - Docs Maintainers/Chinese
+@Tetrateio,rootsongjc,WG - Docs Maintainers/Chinese
+@Alibaba @kubernetes @istio  @servicemesher,SataQiu,WG - Docs Maintainers/Chinese
+@Tencent,Xunzhuo,WG - Docs Maintainers/Chinese
+Google,adammil2000,WG - Docs Maintainers/Infra
+Google LLC,craigbox,WG - Docs Maintainers/Infra
+Google,davidhauck,WG - Docs Maintainers/Infra
+IBM,ericvn,WG - Docs Maintainers/Infra
+IBM,frankbu,WG - Docs Maintainers/Infra
+Google,nmittler,WG - Docs Maintainers/Infra
+Google LLC,rcaballeromx,WG - Docs Maintainers/Infra
+Solo.io,rvennam,WG - Docs Maintainers/Infra
+@RedHatOfficial,gbaufake,WG - Docs Maintainers/Portuguese
+Red Hat,clyang82,WG - Environments Maintainers
+Google LLC,costinm,WG - Environments Maintainers
+Red Hat,dgn,WG - Environments Maintainers
+Google LLC,elfinhe,WG - Environments Maintainers
+Google,howardjohn,WG - Environments Maintainers
+@Intel,irisdingbj,WG - Environments Maintainers
+Solo.io,linsun,WG - Environments Maintainers
+IBM,litong01,WG - Environments Maintainers
+Google,Monkeyanator,WG - Environments Maintainers
+Red Hat,morvencao,WG - Environments Maintainers
+Google,nmittler,WG - Environments Maintainers
+Google,ostromart,WG - Environments Maintainers
+Red Hat Inc.,rcernich,WG - Environments Maintainers
+@google ,richardwxn,WG - Environments Maintainers
+International Business Machines Corporation,sdake,WG - Environments Maintainers
+@Google,stevenctl,WG - Environments Maintainers
+@tetrateio,adiprerepa,WG - Networking Maintainers
+Google,andraxylia,WG - Networking Maintainers
+Clickhouse,bianpengyuan,WG - Networking Maintainers
+Google LLC,costinm,WG - Networking Maintainers
+Aviatrix,duderino,WG - Networking Maintainers
+Solo.io,GregHanson,WG - Networking Maintainers
+Google,howardjohn,WG - Networking Maintainers
+Huawei Technologies Co. Ltd,hzxuzhonghu,WG - Networking Maintainers
+Google,JimmyCYJ,WG - Networking Maintainers
+Cisco System,john-a-joyce,WG - Networking Maintainers
+@google ,kyessenov,WG - Networking Maintainers
+Google,lambdai,WG - Networking Maintainers
+Solo.io,linsun,WG - Networking Maintainers
+@tetrateio,lizan,WG - Networking Maintainers
+SUSE,Nino-K,WG - Networking Maintainers
+Google,nmittler,WG - Networking Maintainers
+@istio @solo-io,nrjpoddar,WG - Networking Maintainers
+Salesforce.com inc.,ramaraochavali,WG - Networking Maintainers
+Google LLC,rlenglet,WG - Networking Maintainers
+@google,rshriram,WG - Networking Maintainers
+Cisco Systems,sbezverk,WG - Networking Maintainers
+@Google,stevenctl,WG - Networking Maintainers
+Cisco Systems Inc.,tiswanso,WG - Networking Maintainers
+@stripe,venilnoronha,WG - Networking Maintainers
+@google ,yxue,WG - Networking Maintainers
+Clickhouse,bianpengyuan,WG - Networking Maintainers/Data Plane
+Aviatrix,duderino,WG - Networking Maintainers/Data Plane
+Google LLC,gargnupur,WG - Networking Maintainers/Data Plane
+Google,JimmyCYJ,WG - Networking Maintainers/Data Plane
+@google ,kyessenov,WG - Networking Maintainers/Data Plane
+Google,lambdai,WG - Networking Maintainers/Data Plane
+Solo.io,linsun,WG - Networking Maintainers/Data Plane
+@tetrateio,lizan,WG - Networking Maintainers/Data Plane
+@google,rshriram,WG - Networking Maintainers/Data Plane
+@stripe,venilnoronha,WG - Networking Maintainers/Data Plane
+@google ,yxue,WG - Networking Maintainers/Data Plane
+@tetrateio,adiprerepa,WG - Networking Maintainers/Pilot
+Google LLC,costinm,WG - Networking Maintainers/Pilot
+Google,howardjohn,WG - Networking Maintainers/Pilot
+Huawei Technologies Co. Ltd,hzxuzhonghu,WG - Networking Maintainers/Pilot
+Salesforce.com inc.,ramaraochavali,WG - Networking Maintainers/Pilot
+@google,rshriram,WG - Networking Maintainers/Pilot
+@Google,stevenctl,WG - Networking Maintainers/Pilot
+Clickhouse,bianpengyuan,WG - Policies and Telemetry  Maintainers
+@google ,douglas-reid,WG - Policies and Telemetry  Maintainers
+@google ,kyessenov,WG - Policies and Telemetry  Maintainers
+@istio @solo-io,nrjpoddar,WG - Policies and Telemetry  Maintainers
+Huawei Technologies Co. Ltd,zirain,WG - Policies and Telemetry  Maintainers
+NotFound,andream12345,WG - Product Security Maintainers
+Google,howardjohn,WG - Product Security Maintainers
+@aspenmesh ,jacob-delgado,WG - Product Security Maintainers
+Google LLC,justinpettit,WG - Product Security Maintainers
+Red Hat,jwendell,WG - Product Security Maintainers
+Google,lambdai,WG - Product Security Maintainers
+Solo.io,lgadban,WG - Product Security Maintainers
+Solo.io,linsun,WG - Product Security Maintainers
+Google Inc.,myidpt,WG - Product Security Maintainers
+@istio @solo-io,nrjpoddar,WG - Product Security Maintainers
+Google,yangminzhu,WG - Product Security Maintainers
+Google LLC,costinm,WG - Security Maintainers
+Google,howardjohn,WG - Security Maintainers
+Google LLC,incfly,WG - Security Maintainers
+Google,JimmyCYJ,WG - Security Maintainers
+Google LLC,lei-tang,WG - Security Maintainers
+Google LLC,liminw,WG - Security Maintainers
+@tetrateio,lizan,WG - Security Maintainers
+Google Inc.,myidpt,WG - Security Maintainers
+Google,shankgan,WG - Security Maintainers
+Google,yangminzhu,WG - Security Maintainers
+Red Hat Inc.,brian-avery,WG - Test and Release Maintainers
+Google LLC,carolynhu,WG - Test and Release Maintainers
+Aviatrix,duderino,WG - Test and Release Maintainers
+IBM,ericvn,WG - Test and Release Maintainers
+Aviatrix,fpesce,WG - Test and Release Maintainers
+Google,howardjohn,WG - Test and Release Maintainers
+@aspenmesh ,jacob-delgado,WG - Test and Release Maintainers
+IBM,johnma14,WG - Test and Release Maintainers
+Red Hat,jwendell,WG - Test and Release Maintainers
+Solo.io,linsun,WG - Test and Release Maintainers
+ex-google,mandarjog,WG - Test and Release Maintainers
+Google,Monkeyanator,WG - Test and Release Maintainers
+Google,nmittler,WG - Test and Release Maintainers
+@google ,richardwxn,WG - Test and Release Maintainers
+International Business Machines Corporation,sdake,WG - Test and Release Maintainers
+@Google,stevenctl,WG - Test and Release Maintainers
+Google LLC,stewartbutler,WG - Test and Release Maintainers
+@Google,therealmitchconnors,WG - Test and Release Maintainers
+IBM @ibm-research and Red Hat partner engineer,esnible,WG - User Experience Maintainers
+NotFound,hanxiaop,WG - User Experience Maintainers
+@Intel,irisdingbj,WG - User Experience Maintainers
+@statsig-io,jasonwzm,WG - User Experience Maintainers
+@tetrateio,liamawhite,WG - User Experience Maintainers
+Google,nmittler,WG - User Experience Maintainers
+VMware,shamsher31,WG - User Experience Maintainers
+@Google,therealmitchconnors,WG - User Experience Maintainers
+Intel Corporation,zhlsunshine,WG - User Experience Maintainers
