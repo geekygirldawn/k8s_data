@@ -28,9 +28,9 @@ You can run the `owners_details.py` program in this repo to generate your own, u
 
 ## Istio Leadership Dataset
 
-This dataset uses the Istio [teams.yaml](https://raw.githubusercontent.com/istio/community/master/org/teams.yaml) file along with [CNCF Affiliation data](https://github.com/cncf/gitdm) to gather information about maintainers and other leadership positions. Where affiliations weren't found in the CNCF data, the GitHub REST API is used to get company information from the user profile if available.
+This dataset uses the Istio [teams.yaml](https://raw.githubusercontent.com/istio/community/master/org/teams.yaml) file along with [CNCF Affiliation data](https://github.com/cncf/gitdm) and the GitHub API for emails listed on GitHub profiles to gather information about maintainers and other leadership positions.
 
-**[owners_data_istio_2022-04-22.csv](owners_data_istio_2022-04-22.csv)**
+**[owners_data_istio_2022-04-25.csv](owners_data_istio_2022-04-25.csv)**
 
 There is a [Jupyter Notebook](Istio_Leadership_Analysis.ipynb) with some basic analysis using this Istio dataset.
 
