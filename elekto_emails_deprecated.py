@@ -1,3 +1,8 @@
+# This script is deprecated.
+# A newer and vastly approved version has been contributed to the Elekto project 
+# and can be found here: 
+# https://github.com/elekto-io/elekto/blob/main/scripts/elekto_emails.py
+#
 # Copyright (C) 2022 Dawn M. Foster
 # Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
 
