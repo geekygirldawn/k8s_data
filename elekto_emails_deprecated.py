@@ -1,5 +1,5 @@
 # This script is deprecated.
-# A newer and vastly approved version has been contributed to the Elekto project 
+# A newer and vastly improved version has been contributed to the Elekto project 
 # and can be found here: 
 # https://github.com/elekto-io/elekto/blob/main/scripts/elekto_emails.py
 #
