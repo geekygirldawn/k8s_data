@@ -4,7 +4,6 @@
 def get_sig_leaders():
 
     from common_functions import process_sig_yaml, create_file
-    import csv
 
     sigs_wgs = process_sig_yaml()
 
@@ -12,22 +11,18 @@ def get_sig_leaders():
     
     for k in sigs_wgs["sigs"]:
         group = 'SIG ' + k['name']
-        print('\n', group, ':', sep='')
         leadership_list = k['leadership']['chairs']
 
         for leader in leadership_list:
             line = group + ',' + leader['name'] + ',' + leader['github'] + ',' + leader['company'] + '\n'
-            print(line)
             output_list.append(line)
 
     for k in sigs_wgs["workinggroups"]:
         group = 'WG ' + k['name']
-        print('\n', group, ':', sep='')
         leadership_list = k['leadership']['chairs']
 
         for leader in leadership_list:
             line = group + ',' + leader['name'] + ',' + leader['github'] + ',' + leader['company'] + '\n'
-            print(line)
             output_list.append(line)
 
     # prepare output file and write header and list to csv
