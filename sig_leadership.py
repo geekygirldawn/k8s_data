@@ -3,22 +3,46 @@
 
 def get_sig_leaders():
 
-    from common_functions import process_sig_yaml
+    from common_functions import process_sig_yaml, create_file
+    import csv
 
     sigs_wgs = process_sig_yaml()
 
+    output_list = ['group,name,github_id,company\n']
+    
     for k in sigs_wgs["sigs"]:
-        print('\nSIG ', k['name'], ':', sep='')
+        group = 'SIG ' + k['name']
+        print('\n', group, ':', sep='')
         leadership_list = k['leadership']['chairs']
 
         for leader in leadership_list:
-            print(leader['name'], ', ', leader['github'], ', ', leader['company'], sep='')
+            line = group + ',' + leader['name'] + ',' + leader['github'] + ',' + leader['company'] + '\n'
+            print(line)
+            output_list.append(line)
 
     for k in sigs_wgs["workinggroups"]:
-        print('\nWG ', k['name'], ':', sep='')
+        group = 'WG ' + k['name']
+        print('\n', group, ':', sep='')
         leadership_list = k['leadership']['chairs']
 
         for leader in leadership_list:
-            print(leader['name'], ', ', leader['github'], ', ', leader['company'], sep='')
+            line = group + ',' + leader['name'] + ',' + leader['github'] + ',' + leader['company'] + '\n'
+            print(line)
+            output_list.append(line)
+
+    # prepare output file and write header and list to csv
+    try:
+        file, file_path = create_file("k8s_SIG_WG_Leads")
+
+        with open(file_path, "w") as out_file:
+            #wr = csv.writer(out_file)
+            for out_line in output_list:
+                out_file.write(out_line)
+            #wr.writerow('group,name,github_id,company')
+            #wr.writerows(output_list)
+
+    except:
+        print('Could not write to csv file. This may be because the output directory is missing or you do not have permissions to write to it. Exiting')
+
 
 get_sig_leaders()
