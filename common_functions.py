@@ -97,14 +97,14 @@ def download_file(url):
 def read_sig_yaml(sig_file):
     import yaml
 
-    stream = open(sig_file, 'r')
-    sigs_wgs = yaml.safe_load(stream)
+    #stream = open(sig_file, 'r')
+    sigs_wgs = yaml.safe_load(sig_file)
 
     return sigs_wgs
 
 def process_sig_yaml():
 
-    sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml', '/tmp/sigs.yaml')
+    sig_file = download_file('https://raw.githubusercontent.com/kubernetes/community/master/sigs.yaml')
 
     sigs_wgs = read_sig_yaml(sig_file)
 
@@ -308,3 +308,32 @@ def expand_name_df(df,old_col,new_col):
 
     df[new_col] = df[old_col].apply(expand_name)
     return df
+
+def create_file(pre_string):
+    """Creates an output file in an "output" directory with today's date
+    as part of the filename and prints the file_path to the terminal to
+    make it easier to open the output file.
+    
+    Parameters
+    ----------
+    pre_string : str
+        This is the string that will preface today's date in the filename
+    Returns
+    -------
+    file : file object
+    file_path : str
+        This is the full path to the file name for the output.
+    
+    """
+    from datetime import datetime
+    from os.path import dirname, join
+
+    today = datetime.today().strftime('%Y-%m-%d')
+    output_filename = "./output/" + pre_string + "_" + today + ".csv"
+    current_dir = dirname(__file__)
+    file_path = join(current_dir, output_filename)
+    file = open(file_path, 'w', newline ='')
+
+    print("Output file:\n", file_path, sep="")
+
+    return file, file_path
