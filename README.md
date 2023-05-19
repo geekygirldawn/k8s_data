@@ -1,5 +1,8 @@
 # k8s_data
-This repo contains scripts to gather various bits of data from Kubernetes along with some datasets under a creative commons license.
+
+This is a poorly named repo that has expanded beyond the original intention.
+
+This repo contains scripts to gather various bits of data from a few CNCF projects along with some datasets under a creative commons license.
 
 The datasets can be found in the [datasets](datasets) directory.
 
