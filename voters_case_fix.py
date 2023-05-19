@@ -1,3 +1,6 @@
+# Copyright (C) Dawn M. Foster
+# Licensed under GNU General Public License (GPL), version 3 or later: http://www.gnu.org/licenses/gpl.txt
+
 """
  This is a hack to read an Elekto voters.yaml file and
  find GH logins where the case in the yaml file doesn't 
