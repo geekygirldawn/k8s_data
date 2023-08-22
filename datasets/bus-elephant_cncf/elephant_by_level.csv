@@ -1,0 +1,167 @@
+,Project/Repository Group,BF,BF%,Bus/Elephant Factor Organizations,Oth. #,Oth. %,Top 10 %,Top Organizations,Rem. #,Rem. %,level
+0,Aeraki Mesh,2,68.29,"Tencent Holdings Limited, Independent",4,31.71,100.0,"Tencent Holdings Limited, Independent, Earth, AlaudaInc, Tencent, BoCloud",0,0.0,sandbox
+1,Akri,1,76.92,Microsoft Corporation,2,23.08,100.0,"Microsoft Corporation, SpaceX, Infracloud Technologies INC",0,0.0,sandbox
+2,Antrea,1,88.6,VMware Inc.,9,11.4,100.0,"VMware Inc., Microsoft Corporation, Independent, Rivos, Amazon, AlaudaInc, DaoCloud Network Technology Co. Ltd., Humana Inc., Intel Corporation, VEXXHOST Inc.",0,0.0,sandbox
+3,Argo,6,50.4,"Intuit Inc., Red Hat Inc., Akuity Inc., Dyno, Bloomberg, DaoCloud Network Technology Co. Ltd.",264,49.6,60.37,"Intuit Inc., Red Hat Inc., Akuity Inc., Dyno, Bloomberg, DaoCloud Network Technology Co. Ltd., Walmart Inc., GetYourGuide, Codefresh Inc., anesec",260,39.63,graduated
+4,Armada,1,77.96,G-Research,12,22.04,99.01,"G-Research, Uber, F5 Networks Inc., BVPIEEE, Rackspace, Independent, ITSA VIT, Quantiphi, brainshuttle, iFood",3,0.99,sandbox
+5,Artifact Hub,2,73.68,"CNCF, Sparx",4,26.32,100.0,"CNCF, Sparx, Google LLC, Docker Inc., Philips, Trendyol Group",0,0.0,sandbox
+6,Athenz,2,66.67,"Verizon Media, CUHK",3,33.33,100.0,"Verizon Media, CUHK, Yahoo! Inc., Tesla Inc., Verizon",0,0.0,sandbox
+7,Backstage,2,51.01,"Spotify AB, RAPID",140,48.99,71.71,"Spotify AB, RAPID, Workday Inc., DXC Technology, VMware Inc., Red Hat Inc., Bonial, OP Financial, Stack Moxie, XebiaLabs",132,28.29,incubating
+8,BFE,1,100.0,Baidu Online Network Technology (Beijing) Co. Ltd,0,0.0,100.0,Baidu Online Network Technology (Beijing) Co. Ltd,0,0.0,sandbox
+9,Brigade,1,83.33,Google LLC,1,16.67,100.0,"Google LLC, Microsoft Corporation",0,0.0,archived
+10,Buildpacks,2,54.76,"Pivotal, VMware Inc.",16,45.24,97.43,"Pivotal, VMware Inc., Heroku Inc., Bloomberg, Avolin, SAP, Red Hat Inc., Google LLC, Independent, Bloomberg L.P.",8,2.57,incubating
+11,Capsule,2,61.96,"CLASTIX, Bedag Informatique",10,38.04,97.83,"CLASTIX, Bedag Informatique, VMware Inc., Wargaming, Obelis Limited, Independent, Skyscanner, CCL CONSULTING, Klarrio BV, VIXNS",2,2.17,sandbox
+12,Carina,1,66.67,BoCloud,2,33.33,100.0,"BoCloud, Eon Cloud, Inspur Group",0,0.0,sandbox
+13,Carvel,1,74.36,VMware Inc.,16,25.64,96.41,"VMware Inc., Pivotal, Mercadona, Independent, Systematic Computer Education Centre, NetEase Inc, Geometer, Mercari Inc, Orange SA, Red Hat Inc.",7,3.59,sandbox
+14,cert-manager,2,62.34,"Jetstack Ltd, Independent",70,37.66,87.59,"Jetstack Ltd, Independent, EngineerBetter Ltd, Squad, Amazon, Vail Resorts, SEL-Zhejiang University, Apple Inc., adorsys GmbH & Co. KG, Zenior AS",62,12.41,incubating
+15,ChaosBlade,1,88.24,keking,2,11.76,100.0,"keking, Independent, Alibaba.com",0,0.0,
+16,Chaos Mesh,1,62.56,PingCAP,12,37.44,98.46,"PingCAP, Independent, Zühlke, Alibaba.com, Huawei, Amazon, Fidelity Investments, Guangzhou Zhipeng Internet of Vehicles Technology Co. Ltd., Jetstack Ltd, MUREX SAS",3,1.54,incubating
+17,Cilium,1,51.14,Isovalent,138,48.86,80.5,"Isovalent, Cilium, Red Hat Inc., Adcubum, VMware Inc., Cloudflare Inc, Google LLC, Quarkslab, DaoCloud Network Technology Co. Ltd., Independent",129,19.5,incubating
+18,Cloud Custodian,2,64.29,"Stacklet, Confidential",21,35.71,94.12,"Stacklet, Confidential, News Corp, Intuit Inc., Capital One, Capital One Financial Corporation, Zapier, Intellias, Razorpay, Microsoft Corporation",13,5.88,incubating
+19,Cloud Deployment Kit for Kubernetes,1,89.29,Amazon,5,10.71,100.0,"Amazon, Palo Alto Networks, Independent, erxes, KURZ Digital Solutions KG, Stakater AB",0,0.0,
+20,CloudEvents,2,55.26,"International Business Machines Corporation, Google LLC",16,44.74,92.98,"International Business Machines Corporation, Google LLC, Red Hat Inc., Intuit Inc., Amazon, Microsoft Corporation, PayPal, Chainguard Inc., RealPage Inc., John Wiley & Sons Inc.",8,7.02,incubating
+21,Clusternet,1,57.78,Independent,13,42.22,95.56,"Independent, AlaudaInc, Tencent Holdings Limited, Inspur Group, Ping An, Tencent, International Business Machines Corporation, CNCF, Intel Corporation, 云知声",4,4.44,sandbox
+22,Clusterpedia,1,96.85,DaoCloud Network Technology Co. Ltd.,2,3.15,100.0,"DaoCloud Network Technology Co. Ltd., International Business Machines Corporation, Inspur Group",0,0.0,sandbox
+23,CNCF,14,51.28,"CNCF, Independent, Red Hat Inc., International Business Machines Corporation, Samsung Research America Inc., Microsoft Corporation, VMware Inc., Stacklet, The Linux Foundation, Electronics and Telecommunications Research Institute",234,48.72,43.81,"CNCF, Independent, Red Hat Inc., International Business Machines Corporation, Samsung Research America Inc., Microsoft Corporation, VMware Inc., Stacklet, The Linux Foundation, Electronics and Telecommunications Research Institute",238,56.19,
+24,CNI,1,55.0,Red Hat Inc.,16,45.0,88.33,"Red Hat Inc., Amazon, DaoCloud Network Technology Co. Ltd., Stateless, Red Coat, Alibaba.com, Independent, Tencent Holdings Limited, Trendyol Group, 6WIND S.A.",7,11.67,
+25,Confidential Containers,2,63.6,"Red Hat Inc., International Business Machines Corporation",11,36.4,99.46,"Red Hat Inc., International Business Machines Corporation, Intel Corporation, Microsoft Corporation, VMware Inc., Alibaba.com, ARM, HackerRank, CNCF, AMD",3,0.54,sandbox
+26,containerd,5,51.73,"Amazon, Microsoft Corporation, NTT Corporation, DaoCloud Network Technology Co. Ltd., Ant Group",60,48.27,76.47,"Amazon, Microsoft Corporation, NTT Corporation, DaoCloud Network Technology Co. Ltd., Ant Group, Datadog Inc, Apple Inc., Alibaba.com, Bytedance Ltd, Google LLC",55,23.53,graduated
+27,ContainerSSH,1,66.67,Bytedance Ltd,3,33.33,100.0,"Bytedance Ltd, LG Electronics, CERN, Tencent Holdings Limited",0,0.0,sandbox
+28,Contour,1,84.2,VMware Inc.,17,15.8,98.02,"VMware Inc., Ericsson, DaoCloud Network Technology Co. Ltd., Stacktical, ThoughtWorks Inc, Graphcore, Microsoft Corporation, Red Hat Inc., Apple Inc., Independent",8,1.98,incubating
+29,CoreDNS,4,51.55,"Infoblox Inc., Jamf, MobileIron, QGroup",27,48.45,73.2,"Infoblox Inc., Jamf, MobileIron, QGroup, Independent, Red Hat Inc., DaoCloud Network Technology Co. Ltd., Reddit Inc, Amazon, Spotify AB",21,26.8,graduated
+30,Cortex,1,71.58,Amazon,14,28.42,97.27,"Amazon, Adobe Inc., NetEase Inc, JD.inc, AU SMALL FINANCE BANK, plusserver, UpStar, Grafana Labs, Infoblox Inc., Intel Corporation",5,2.73,incubating
+31,CRI-O,1,84.88,Red Hat Inc.,16,15.12,98.37,"Red Hat Inc., Intel Corporation, Independent, FreeBSD, Tata Research, International Business Machines Corporation, Nutanix Inc., Polkomtel, Inovasi, ECSIT",7,1.63,graduated
+32,Crossplane,2,51.57,"Upbound, SIGHUP Inc",72,48.43,73.09,"Upbound, SIGHUP Inc, DKB | Deutsche Kreditbank, Red Hat Inc., Nokia Corporation, Accenture Global Solutions Limited, CNCF, ADA Logics, SpareBank, Equinix Inc.",64,26.91,incubating
+33,CubeFS,1,61.31,Guangdong OPPO Mobile Telecommunications Corp. Ltd.,6,38.69,100.0,"Guangdong OPPO Mobile Telecommunications Corp. Ltd., NetEase Inc, anesec, HDU, Inspur Group, BEIKE (Beijing) Technology Corp. Ltd., Stakater AB",0,0.0,incubating
+34,Curiefense,1,74.12,Reblaze,1,25.88,100.0,"Reblaze, Independent",0,0.0,sandbox
+35,Curve,1,60.18,NetEase Inc,10,39.82,99.12,"NetEase Inc, Independent, anesec, Bytedance Ltd, Cisco, Huawei, Hust, Caiyun Technology (Caicloud), Tencent, b",1,0.88,sandbox
+36,Dapr,1,76.19,Microsoft Corporation,44,23.81,95.76,"Microsoft Corporation, Jetstack Ltd, Diagrid, Chariot Solutions, Tencent, Synadia Communications, Sony Interactive Entertainment LLC, YourBase, Proximus, Red Hat Inc.",35,4.24,incubating
+37,Devfile,1,94.46,Red Hat Inc.,5,5.54,100.0,"Red Hat Inc., International Business Machines Corporation, BNP Paribas, Escenic, Apache, Amazon",0,0.0,sandbox
+38,DevSpace,1,85.71,Loft,2,14.29,100.0,"Loft, DevSpace, Independent",0,0.0,sandbox
+39,DevStream,2,61.39,"Independent, NoCode",6,38.61,100.0,"Independent, NoCode, HDU, GitGuardian, Huawei, genedock, Wechaty, HDUHELP",0,0.0,sandbox
+40,Dex,4,53.49,"FLANT EUROPE OÜ, Cisco, Snyk, adorsys GmbH & Co. KG",14,46.51,81.4,"FLANT EUROPE OÜ, Cisco, Snyk, adorsys GmbH & Co. KG, Garner Corp, D2iQ Inc. (f/k/a Mesosphere), Platform9 Systems Inc., Philips, LINE Plus, Camptocamp",8,18.6,sandbox
+41,Distribution,2,51.43,"Datadog Inc, Infrahackers ltd",15,48.57,93.33,"Datadog Inc, Infrahackers ltd, Plural, VMware Inc., International Business Machines Corporation, Docker Inc., DaoCloud Network Technology Co. Ltd., Blue Owi, ADA Logics, Enapter",7,6.67,sandbox
+42,Dragonfly,1,69.35,Ant Group,14,30.65,99.46,"Ant Group, Alibaba.com, Bytedance Ltd, FNST, ant group, TABLEAU SOFTWARE LLC, Independent, Inspur Group, Stakater AB, Oracle America Inc.",5,0.54,incubating
+43,Emissary-ingress,2,63.92,"BXB Digital, DATAWIRE AG",13,36.08,94.85,"BXB Digital, DATAWIRE AG, Ambassador Labs (f/k/a Datawire), (Robots), Vultr, Ambassador, HelloFresh, Portainer, Improbable Worlds Limited, Cognite AS",5,5.15,
+44,Envoy,2,51.22,"Google LLC, Tetrate.io",81,48.78,86.65,"Google LLC, Tetrate.io, Lyft Inc., Tencent Holdings Limited, Independent, NetEase Inc, Intel Corporation, Huawei Technologies Co. Ltd, Giant Swarm GmbH, Ambassador Labs (f/k/a Datawire)",73,13.35,graduated
+45,Eraser,1,65.15,Microsoft Corporation,1,34.85,100.0,"Microsoft Corporation, Weaveworks Inc.",0,0.0,sandbox
+46,etcd,2,57.23,"VMware Inc., Google LLC",44,42.77,90.52,"VMware Inc., Google LLC, Independent, Red Hat Inc., Amazon, Cockroach Labs, Apple Inc., DaoCloud Network Technology Co. Ltd., Alibaba.com, International Business Machines Corporation",36,9.48,graduated
+47,External Secrets Operator,2,60.0,"inovex GmbH, Container Solutions BV",43,40.0,85.66,"inovex GmbH, Container Solutions BV, freee 株式会社, International Business Machines Corporation, Red Hat Inc., Form3, Independent, Nuance Communications Inc., Boehringer Ingelheim, Wiz",35,14.34,
+48,Falco,1,64.5,Sysdig Inc.,45,35.5,96.32,"Sysdig Inc., Independent, MegiTeam, CLASTIX, SecureWorks Inc., PawsNme · Internship, Chainguard Inc., Google LLC, Red Hat Inc., Bayer",36,3.68,incubating
+49,Fluentd,3,60.34,"Independent, Calyptia, Toshiba Corporation",61,39.66,87.47,"Independent, Calyptia, Toshiba Corporation, ClearCode, Amazon, ARM, KJSCE CodeCell, SAP, Reed, Bulb Energy Limited",54,12.53,graduated
+50,Fluid,2,69.34,"NetEase Inc, Independent",9,30.66,99.38,"NetEase Inc, Independent, Alibaba.com, anesec, 阿里巴巴, Independentr, 4paradigm, Beijing University of Posts and Telecommunications (BUPT), Inceptio, SAP",1,0.62,sandbox
+51,Flux,1,77.19,Weaveworks Inc.,50,22.81,92.98,"Weaveworks Inc., Independent, (Robots), Cybercom Group AB, Trendyol Group, KridaFans, ManoMano, Airtame, Cato Networks, Buoyant Inc.",41,7.02,graduated
+52,Foniod,2,100.0,"Mesosphere, HashiCorp Inc",0,0.0,100.0,"Mesosphere, HashiCorp Inc",0,0.0,
+53,GitOps WG,2,65.75,"Microsoft Corporation, The Linux Foundation",13,34.25,93.15,"Microsoft Corporation, The Linux Foundation, American Express Banking Corp., VMware Inc., Loft, Vivo, Dynatrace LLC, Alion Science and Technology Corporation, WhizUs GmbH, Amazon",5,6.85,
+54,gRPC,1,85.6,Google LLC,56,14.4,96.67,"Google LLC, Microsoft Corporation, Adimen, Independent, Apple Inc., Intel Corporation, Amazon, GitLab Inc., HP Inc., simplesurance",47,3.33,incubating
+55,Harbor,1,58.94,VMware Inc.,46,41.06,90.66,"VMware Inc., Hewlett, DaoCloud Network Technology Co. Ltd., Independent, TABLEAU SOFTWARE LLC, Data Ductus, 8gears AG, Google LLC, Datadog Inc, Telefonica",37,9.34,graduated
+56,Headlamp,2,75.0,"CERN, Microsoft Corporation",3,25.0,100.0,"CERN, Microsoft Corporation, Independent, HackerRank, Docker Inc.",0,0.0,sandbox
+57,Helm,10,50.61,"SUSE LLC, DaoCloud Network Technology Co. Ltd., Mesosphere, Weaveworks Inc., Independent, Red Hat Inc., Chainguard Inc., International Business Machines Corporation, Microsoft Corporation, Mercedes-Benz AG",58,49.39,50.61,"SUSE LLC, DaoCloud Network Technology Co. Ltd., Mesosphere, Weaveworks Inc., Independent, Red Hat Inc., Chainguard Inc., International Business Machines Corporation, Microsoft Corporation, Mercedes-Benz AG",58,49.39,graduated
+58,Hexa Policy Orchestrator,2,77.78,"VMware Inc., Initial Capacity",2,22.22,100.0,"VMware Inc., Initial Capacity, Geometer, Independent",0,0.0,
+59,Hwameistor,1,100.0,DaoCloud Network Technology Co. Ltd.,0,0.0,100.0,DaoCloud Network Technology Co. Ltd.,0,0.0,
+60,Inclavare Containers,1,100.0,Alibaba.com,0,0.0,100.0,Alibaba.com,0,0.0,sandbox
+61,Inspektor Gadget,1,95.71,Microsoft Corporation,5,4.29,100.0,"Microsoft Corporation, Independent, ARMO, Emind Software Co. Ltd., CERN, Coop i Danmark",0,0.0,sandbox
+62,in-toto,2,58.42,"Amazon, Google LLC",13,41.58,95.05,"Amazon, Google LLC, NYU Langone Health, Red Hat Inc., VMware Inc., Independent, Chainguard Inc., BoxBoat Technologies, International Business Machines Corporation, CNCF",5,4.95,incubating
+63,Istio,3,53.93,"Google LLC, DaoCloud Network Technology Co. Ltd., International Business Machines Corporation",104,46.07,85.7,"Google LLC, DaoCloud Network Technology Co. Ltd., International Business Machines Corporation, Huawei Technologies Co. Ltd, Solo.io, Aspen Mesh, Intel Corporation, Ericsson, Salesforce.com Inc., Microsoft Corporation",97,14.3,graduated
+64,Jaeger,2,56.97,"Meta Platforms Inc., Red Hat Inc.",40,43.03,84.86,"Meta Platforms Inc., Red Hat Inc., Uber, Fandom, Logshero Ltd., Grafana Labs, Independent, Cloudflare Inc, Staffbase, Hound Technology Inc. dba Honeycomb",32,15.14,graduated
+65,K3s,1,91.89,SUSE LLC,25,8.11,96.07,"SUSE LLC, Independent, Grid Dynamics, FORTH, HDUHELP, Portainer, Weir Oil and Gas, Genesis, Google LLC, Grafana",16,3.93,
+66,K8GB,2,66.67,"Independent, Absa",3,33.33,100.0,"Independent, Absa, McKinsey & Company, Kainos Software, SEL-Zhejiang University",0,0.0,
+67,K8up,1,57.14,VSHN AG,3,42.86,100.0,"VSHN AG, amazee.io, Helio AG, Independent",0,0.0,sandbox
+68,Karmada,2,76.96,"Huawei Technologies Co. Ltd, DaoCloud Network Technology Co. Ltd.",22,23.04,97.81,"Huawei Technologies Co. Ltd, DaoCloud Network Technology Co. Ltd., Independent, DiDi Global, SEL-Zhejiang University, NetEase Inc, Meta Platforms Inc., BeyondCloud, TenxCloud, anesec",14,2.19,sandbox
+69,KEDA,2,51.72,"SCRM Lidl International Hub, Microsoft Corporation",52,48.28,86.64,"SCRM Lidl International Hub, Microsoft Corporation, Red Hat Inc., Grab, Microsoft ·, DocPlanner, ChaosNative, Inloco, Genesys, NEC Corporation",44,13.36,
+70,Kepler,2,83.44,"International Business Machines Corporation, Red Hat Inc.",10,16.56,99.35,"International Business Machines Corporation, Red Hat Inc., Independent, Intel Corporation, Moula, Fermilab, Dynatrace LLC, Weaveworks Inc., T-Systems, SUSE LLC",2,0.65,sandbox
+71,Keptn,1,76.36,Dynatrace LLC,19,23.64,98.55,"Dynatrace LLC, Antal International, WeMakeDevs, ITSA VIT, BVPIEEE, CloudBees Inc., Independent, Moula, Orange SA, Infracloud Technologies INC",10,1.45,incubating
+72,Keycloak,1,89.39,Red Hat Inc.,43,10.61,96.35,"Red Hat Inc., Hitachi Ltd., Codecentric AG, Bosch, SDAIA, Independent, COSIUM SARL, goTRG, Ericsson, Webvalto",34,3.65,incubating
+73,Keylime,1,58.18,International Business Machines Corporation,2,41.82,100.0,"International Business Machines Corporation, Red Hat Inc., Independent",0,0.0,sandbox
+74,Knative,1,55.07,Red Hat Inc.,50,44.93,95.67,"Red Hat Inc., VMware Inc., International Business Machines Corporation, Rackspace, Independent, Intel Corporation, Chainguard Inc., Google LLC, viax, Huawei Technologies Co. Ltd",41,4.33,incubating
+75,ko,1,53.95,Chainguard Inc.,16,46.05,90.79,"Chainguard Inc., Trendyol Group, Google LLC, Gaijin Entertainment, Amazon, Red Hat Inc., Accso, Concentrix, Huawei Technologies Co. Ltd, mausworks",7,9.21,sandbox
+76,Konveyor,1,79.74,Red Hat Inc.,6,20.26,100.0,"Red Hat Inc., International Business Machines Corporation, Lacoda, MathWorks Inc., CNCF, TransUnion, Portainer",0,0.0,sandbox
+77,kpt,1,74.34,Google LLC,14,25.66,99.34,"Google LLC, Cruise Automation, Spotify AB, Bol.com b.v., Concentrix, XebiaLabs, Zillow Inc., TV 2 DANMARK, AGORA, Rakuten Group Inc.",5,0.66,sandbox
+78,Krustlet,2,54.55,"Intel Corporation, SUSE LLC",3,45.45,100.0,"Intel Corporation, SUSE LLC, Red Hat Inc., Microsoft Corporation, International Business Machines Corporation",0,0.0,sandbox
+79,KubeArmor,1,52.49,Accuknox,12,47.51,98.34,"Accuknox, Cimpress plc, Independent, SEL-Zhejiang University, GeekHaven IIIT Allahabad, MayaData Inc. (f/k/a CloudByte Inc), KodeKloud, 杭州电子科技大学, Infracloud Technologies INC, Huawei Technologies Co. Ltd",3,1.66,sandbox
+80,Kubeclipper,2,90.0,"anesec, 99Cloud Inc.",1,10.0,100.0,"anesec, 99Cloud Inc., Independent",0,0.0,
+81,KubeDL,2,54.55,"Independent, Merico",3,45.45,100.0,"Independent, Merico, Alibaba.com, Baidu Online Network Technology (Beijing) Co. Ltd, Apache",0,0.0,sandbox
+82,KubeEdge,1,71.12,Huawei Technologies Co. Ltd,13,28.88,99.21,"Huawei Technologies Co. Ltd, DaoCloud Network Technology Co. Ltd., Independent, Inspur Group, anesec, SEL-Zhejiang University, Ci4Rail, Axis, Sony Group Corporation, China Unicom",4,0.79,incubating
+83,Kubeflow,3,61.61,"Google LLC, International Business Machines Corporation, Arrikto",63,38.39,87.67,"Google LLC, International Business Machines Corporation, Arrikto, Independent, VMware Inc., Canonical, Baidu Online Network Technology (Beijing) Co. Ltd, Cisco, ELIIZA PTY LTD, Nutanix Inc.",56,12.33,incubating
+84,Kube-OVN,1,72.98,AlaudaInc,7,27.02,100.0,"AlaudaInc, China Mobile Communication Company Ltd, Inspur Group, 99Cloud Inc., anesec, American Express Banking Corp., China Telecom, Opsert Oy",0,0.0,sandbox
+85,Kuberhealthy,3,75.0,"Meltwater News US Inc., Atlassian, CYBOT",1,25.0,100.0,"Meltwater News US Inc., Atlassian, CYBOT, home.ai",0,0.0,sandbox
+86,Kubernetes,5,55.05,"Google LLC, Microsoft Corporation, Red Hat Inc., DaoCloud Network Technology Co. Ltd., VMware Inc.",737,44.95,70.3,"Google LLC, Microsoft Corporation, Red Hat Inc., DaoCloud Network Technology Co. Ltd., VMware Inc., Amazon, Independent, International Business Machines Corporation, Intel Corporation, Chainguard Inc.",732,29.7,graduated
+87,kube-rs,1,54.24,Independent,17,45.76,93.22,"Independent, ESW, Stackable, Buoyant Inc., Weaveworks Inc., YANDEX LLC, Anaplan Inc., Astronomer, Amazon, RepliXio",8,6.78,sandbox
+88,Kubescape,1,86.54,ARMO,21,13.46,98.69,"ARMO, Independent, PAIRWISE, BVPIEEE, TryHackMe, Imdependent, Swiss Post, Schneider Electric · Apprenticeship, International Business Machines Corporation, Layer5",12,1.31,sandbox
+89,KubeVela,2,72.62,"Alibaba.com, Bytedance Ltd",25,27.38,97.19,"Alibaba.com, Bytedance Ltd, 北京, Independent, HDUHELP, anesec, Guidewire Software, Trendyol Group, Tencent Holdings Limited, Shanghai Qiniu Information Technology Co. Ltd.",17,2.81,incubating
+90,kube-vip,2,64.44,"VMware Inc., Equinix Inc.",12,35.56,91.11,"VMware Inc., Equinix Inc., SUSE LLC, Nutanix Inc., International Business Machines Corporation, Sony Interactive Entertainment LLC, Amazon, CDGCC, Hestor, Hetzner",4,8.89,sandbox
+91,KubeVirt,1,86.93,Red Hat Inc.,30,13.07,98.43,"Red Hat Inc., Independent, Gitpod GmbH, Google LLC, International Business Machines Corporation, ARM, SUSE LLC, FLANT EUROPE OÜ, CNCF, Intel Corporation",21,1.57,incubating
+92,kubewarden,1,95.93,SUSE LLC,8,4.07,100.0,"SUSE LLC, Red Hat Inc., Motius, Capgemini, CNCF, Independent, Orange SA, CloudBees Inc., Ferring Pharmaceuticals",0,0.0,
+93,Kudo,2,56.0,"PayFit, Mesosphere",6,44.0,100.0,"PayFit, Mesosphere, Orange SA, D2iQ Inc. (f/k/a Mesosphere), Dell, Red Hat Inc., SQUER Solutions, Zenior AS",0,0.0,
+94,Kuma,1,56.08,Kong Inc.,12,43.92,99.64,"Kong Inc., Independent, Koyeb, Allegro.pl sp. z o.o., Kong Inc, Red Hat Inc., Mesosphere, Proximis, Tesco, GirlScript Foundation",3,0.36,sandbox
+95,Kured,1,52.73,Weaveworks Inc.,8,47.27,100.0,"Weaveworks Inc., Independent, Microsoft Corporation, SUSE LLC, PHOENIX MEDIA, Fullstaq, Elude, Kollective, Maersk",0,0.0,sandbox
+96,Kyverno,1,60.68,PayFit,75,39.32,92.51,"PayFit, CNCF, Dell, move:elevator, Nirmata Inc., Independent, MayaData Inc. (f/k/a CloudByte Inc), NeuAlto, DaoCloud Network Technology Co. Ltd., Trendyol Group",66,7.49,incubating
+97,Lima,2,67.07,"NTT Corporation, ECSIT",19,32.93,92.81,"NTT Corporation, ECSIT, ThoughtWorks Inc, ActiveState Software Inc., SUSE LLC, PingCAP, TriggerMesh Inc., Chainguard Inc., D3.do, Independent",11,7.19,sandbox
+98,Linkerd,1,84.18,Buoyant Inc.,28,15.82,94.63,"Buoyant Inc., DATAWIRE AG, 株式会社アンドパッド, adidas, LilithGames, GROPYUS, Intel Corporation, Independent, ZipRecruiter Inc., Sarwa",19,5.37,graduated
+99,LitmusChaos,2,75.0,"ChaosNative, MayaData Inc. (f/k/a CloudByte Inc)",14,25.0,95.95,"ChaosNative, MayaData Inc. (f/k/a CloudByte Inc), Harness, Independent, Palo Alto Networks, DINS, Capgemini, Coursera, Docker Inc., CNCF",6,4.05,
+100,Longhorn,1,86.26,SUSE LLC,8,13.74,100.0,"SUSE LLC, Dell, NetApp Inc, Aditro, ScrollStack, Motius, G-Research, Inspur Group, djangsters",0,0.0,incubating
+101,Merbridge,1,81.4,DaoCloud Network Technology Co. Ltd.,3,18.6,100.0,"DaoCloud Network Technology Co. Ltd., Independent, Telecom, Tencent Holdings Limited",0,0.0,sandbox
+102,Meshery,2,54.24,"Independent, Layer5",38,45.76,91.41,"Independent, Layer5, CNCF, Thinkful Inc., Major League Hacking, D_CODER DTU, CircuitVerse, GNU, Google LLC, Honeywell International",30,8.59,sandbox
+103,Metal³,1,82.92,Ericsson,16,17.08,98.98,"Ericsson, Red Hat Inc., FNST, Deutsche Telekom, Mellanox, SUSE LLC, Microsoft Corporation, Deutsche Bank AG, Independent, Ascendant",7,1.02,sandbox
+104,MetalLB,1,64.52,Red Hat Inc.,19,35.48,94.62,"Red Hat Inc., DaoCloud Network Technology Co. Ltd., Ericsson, Equinix Inc., Hestor, EMERGING TECHNOLOGY PARTNERS, AlaudaInc, Element AI, Chess, Isovalent",10,5.38,sandbox
+105,Microcks,2,57.14,"Red Hat Inc., Postman",3,42.86,100.0,"Red Hat Inc., Postman, Google LLC, Marianne Formation SAS, Sensible",0,0.0,sandbox
+106,NATS,1,63.9,Synadia Communications,51,36.1,91.04,"Synadia Communications, Independent, Element, BoxBoat Technologies, Pennock, Apcera, Partwotx, Nico, Lectra S.A, Scaleway",42,8.96,incubating
+107,Network Service Mesh,1,62.89,Xored,5,37.11,100.0,"Xored, Independent, Ericsson, Acnodal, Red Hat Inc., Cisco",0,0.0,sandbox
+108,Nocalhost,1,63.64,Tencent,4,36.36,100.0,"Tencent, Independent, shunneng, Bandism, Alibaba.com",0,0.0,sandbox
+109,Notary,1,61.93,Microsoft Corporation,15,38.07,98.19,"Microsoft Corporation, Amazon, CNCF, Agitare, ADA Logics, Pluralsight, Genesys, Datadog Inc, Google LLC, Docker Inc.",6,1.81,incubating
+110,OPA,3,57.32,"Styra Inc, Google LLC, Jetstack Ltd",57,42.68,86.62,"Styra Inc, Google LLC, Jetstack Ltd, Weaveworks Inc., Red Hat Inc., Microsoft Corporation, DaoCloud Network Technology Co. Ltd., ZTE Corporation, Independent, anesec",50,13.38,
+111,OPCR,1,100.0,Aserto,0,0.0,100.0,Aserto,0,0.0,
+112,Open Cluster Management,1,64.82,Red Hat Inc.,6,35.18,100.0,"Red Hat Inc., International Business Machines Corporation, Caiyun Technology (Caicloud), Independent, Tencent Holdings Limited, ant group, Tigera Inc.",0,0.0,sandbox
+113,OpenCost,2,66.37,"Stackwatch, Independent",35,33.63,89.49,"Stackwatch, Independent, Kubecost, Snowflake, Transcepta, Canonical Ltd., Platform24, Dell, Swiss Post, Ayoy AB",27,10.51,sandbox
+114,OpenEBS,1,83.15,MayaData Inc. (f/k/a CloudByte Inc),14,16.85,99.3,"MayaData Inc. (f/k/a CloudByte Inc), DataCore Software, BrainGu, HiveMQ, Deutsche Bank AG, VMware Inc., Linaro Limited, Microsoft Corporation, Red Hat Inc., ANZ Banking Group Ltd.",5,0.7,sandbox
+115,OpenELB,2,75.0,"DaoCloud Network Technology Co. Ltd., CloudCheckr Inc.",1,25.0,100.0,"DaoCloud Network Technology Co. Ltd., CloudCheckr Inc., Stakater AB",0,0.0,sandbox
+116,OpenFeature,1,62.98,Dynatrace LLC,29,37.02,93.26,"Dynatrace LLC, Independent, Skillshare, OpenFeature, Adevinta, American Express Banking Corp., Antal International, Loan Market, Desmada, PartnerSlate",20,6.74,sandbox
+117,OpenFGA,2,71.54,"Auth0 Inc., Okta Inc.",13,28.46,98.67,"Auth0 Inc., Okta Inc., Independent, Onfido, Twintag, Nomono, Conduktor · Apprenticeship, Ozee, GoDaddy Operating Company LLC, Olive",5,1.33,sandbox
+118,OpenFunction,2,75.2,"Independent, QingCloud Technologies Corp.",4,24.8,100.0,"Independent, QingCloud Technologies Corp., ncv, Pinterest Inc., QingCloud, SAP",0,0.0,sandbox
+119,OpenKruise,1,51.71,Alibaba.com,18,48.29,95.61,"Alibaba.com, Baffin Bay Networks, Independent, Inspur Group, Zhejiang University, anesec, Bytedance Ltd, Shanghai Ctrip Commerce Co. Ltd., KiwiPlan, WeChat IT散修",9,4.39,incubating
+120,OpenMetrics,2,66.67,"Grafana Labs, gandi.net",1,33.33,100.0,"Grafana Labs, gandi.net, Splunk Inc.",0,0.0,incubating
+121,Open Service Mesh,1,90.98,Microsoft Corporation,3,9.02,100.0,"Microsoft Corporation, NEC Corporation, Guangzhou Zhipeng Internet of Vehicles Technology Co. Ltd., Solo.io",0,0.0,archived
+122,OpenTelemetry,4,52.59,"Splunk Inc., Microsoft Corporation, LightStep Inc., New Relic Inc.",262,47.41,73.52,"Splunk Inc., Microsoft Corporation, LightStep Inc., New Relic Inc., Cisco, Hound Technology Inc. dba Honeycomb, Google LLC, observIQ, Dynatrace LLC, Sumo Logic Inc.",256,26.48,incubating
+123,OpenYurt,2,52.79,"Alibaba.com, SEL-Zhejiang University",15,47.21,96.02,"Alibaba.com, SEL-Zhejiang University, Independent, anesec, Inspur Group, Tongji University, CNCF, Sony Group Corporation, Zhejiang University, Intel Corporation",7,3.98,sandbox
+124,Operator Framework,1,82.64,Red Hat Inc.,18,17.36,98.51,"Red Hat Inc., International Business Machines Corporation, Akamai Technologies Inc., Google LLC, Solo.io, NRC, Ultimum, Warby Parker, ObvioHealth, Sopra Steria Group",9,1.49,incubating
+125,ORAS,1,73.67,Microsoft Corporation,21,26.33,97.55,"Microsoft Corporation, Amazon, Independent, CNCF, Twitter Inc., Trendyol Group, CLASTIX, Nokia Corporation, MZ, Weaveworks Inc.",12,2.45,sandbox
+126,Paralus,1,95.97,Infracloud Technologies INC,3,4.03,100.0,"Infracloud Technologies INC, Cloud Native Islamabad, World Programming Ltd, Merico",0,0.0,sandbox
+127,PARSEC,3,64.29,"ARM, Sylog Sverige AB, Arm",5,35.71,100.0,"ARM, Sylog Sverige AB, Arm, Azion, Fortanix, gandi.net, Independent, FreshX",0,0.0,
+128,PipeCD,1,63.73,CyberAgent,6,36.27,100.0,"CyberAgent, future university hakodate, Tokyo, CyberAgent Inc., 慶應義塾大学, AbemaTV, Independent",0,0.0,sandbox
+129,Piraeus-Datastore,1,84.91,LINBIT HA-Solutions GmbH,3,15.09,100.0,"LINBIT HA-Solutions GmbH, FLANT EUROPE OÜ, DaoCloud Network Technology Co. Ltd., Stakater AB",0,0.0,
+130,Pixie,1,51.41,Pixie,9,48.59,100.0,"Pixie, ObvioHealth, Twitter Inc., b, VMware Inc., New Relic Inc., AddEnergie, CNCF, Intracom Telecom, Tencent Holdings Limited",0,0.0,sandbox
+131,Porter,1,67.52,Microsoft Corporation,5,32.48,100.0,"Microsoft Corporation, Red Hat Inc., Independent, Merico, Amazon, Astronome",0,0.0,sandbox
+132,Pravega,2,78.5,"Dell, Dell EMC",8,21.5,100.0,"Dell, Dell EMC, Zeta, Mirantis Inc., Ping Identity Corporation, American Power Conversion, D2iQ Inc. (f/k/a Mesosphere), Soho House & Co, Tencent Holdings Limited, Insight Global",0,0.0,sandbox
+133,Prometheus,5,53.78,"Grafana Labs, Inuits, Reddit Inc, Red Hat Inc., GitLab",120,46.22,66.99,"Grafana Labs, Inuits, Reddit Inc, Red Hat Inc., GitLab, Amazon, Grafana, Independent, Confluent, Google LLC",115,33.01,graduated
+134,Rook,1,73.84,Red Hat Inc.,27,26.16,93.64,"Red Hat Inc., SUSE LLC, Cybozu, Cloudical, Independent, Síclo, LSST, Capgemini, HiRoad, D2iQ Inc. (f/k/a Mesosphere)",18,6.36,graduated
+135,SchemaHero,1,75.0,Independent,1,25.0,100.0,"Independent, Replicated Inc.",0,0.0,sandbox
+136,sealer,2,60.66,"SEL-Zhejiang University, Independent",5,39.34,100.0,"SEL-Zhejiang University, Independent, NetEase Inc, Docker Inc., Atlan, Ginbits, Huawei Technologies Co. Ltd",0,0.0,sandbox
+137,Serverless Devs,1,71.43,Alibaba.com,1,28.57,100.0,"Alibaba.com, Independent",0,0.0,sandbox
+138,Serverless Workflow,2,63.73,"Red Hat Inc., Caiyun Technology (Caicloud)",6,36.27,100.0,"Red Hat Inc., Caiyun Technology (Caicloud), Neuroglia SPRL, Independent, Neuroglia SRL, Insight Global, Microsoft Corporation, WeBank",0,0.0,sandbox
+139,Service Mesh Performance,2,54.55,"D_CODER DTU, Layer5",4,45.45,100.0,"D_CODER DTU, Layer5, Independent, CNCF, Intel Corporation, Microsoft Corporation",0,0.0,sandbox
+140,Skooner,2,100.0,"CBT Nuggets, Indeed Inc.",0,0.0,100.0,"CBT Nuggets, Indeed Inc.",0,0.0,sandbox
+141,SlimToolkit,1,55.88,Slim,9,44.12,100.0,"Slim, Google LLC, Independent, SLIM.AI, Slim.AI, Gigmoni, Red Hat Inc., Trendyol Group, Bobâ€™s Oilfield Service, PathAI",0,0.0,sandbox
+142,SOPS,6,56.25,"Weaveworks Inc., Alemira, Beamery, BitGo, Camptocamp, Cato Networks",7,43.75,81.25,"Weaveworks Inc., Alemira, Beamery, BitGo, Camptocamp, Cato Networks, CHN, Independent, MANTL, Mode Media",3,18.75,sandbox
+143,SPIFFE,2,52.14,"Pacific Northwest National Laboratory, Philips",19,47.86,94.87,"Pacific Northwest National Laboratory, Philips, International Business Machines Corporation, Independent, F5 Networks Inc., Infoblox Inc., Scytale, VMware Inc., Hewlett, Solo.io",11,5.13,graduated
+144,SPIRE,3,63.38,"Scytale, Uber, VMware Inc.",11,36.62,96.48,"Scytale, Uber, VMware Inc., Philips, Deep Lens, F5 Networks Inc., Z Lab, Trendyol Group, AKEYLESS, Red Hat Inc.",4,3.52,graduated
+145,Strimzi,1,92.72,Red Hat Inc.,11,7.28,99.7,"Red Hat Inc., International Business Machines Corporation, Independent, Fermilab, BlaBlaCar, Merck & Co. Inc., 2N TELEKOMUNIKACE, EPAM, HUMAN, Netcracker Technology Corporation",2,0.3,sandbox
+146,Submariner,1,98.6,Red Hat Inc.,7,1.4,100.0,"Red Hat Inc., DaoCloud Network Technology Co. Ltd., Inspur Group, VMware Inc., iguazio, EPAM Systems Inc, Independent, Optiva",0,0.0,sandbox
+147,SuperEdge,1,57.14,Alibaba.com,3,42.86,100.0,"Alibaba.com, Stakater AB, VMware Inc., Inspur Group",0,0.0,sandbox
+148,Telepresence,1,57.58,Ambassador Labs (f/k/a Datawire),8,42.42,100.0,"Ambassador Labs (f/k/a Datawire), Thought Machine, Ambassador, Autonomic LLC, National Bank of Canada, DATAWIRE AG, Greenlight, Machaao, Atlan",0,0.0,sandbox
+149,Teller,2,100.0,"Calsoft Inc., SimilarWeb",0,0.0,100.0,"Calsoft Inc., SimilarWeb",0,0.0,sandbox
+150,Thanos,4,58.21,"Amazon, Personio GmbH, Vinted, Red Hat Inc.",36,41.79,82.5,"Amazon, Personio GmbH, Vinted, Red Hat Inc., simplesurance, New Relic Inc., Independent, Shopify Inc., ncv, Dcard",30,17.5,incubating
+151,TiKV,1,60.27,PingCAP,18,39.73,98.91,"PingCAP, Independent, Air Works India (Engineering) Private Limited, Tencent Holdings Limited, Booking.com B.V., Automobile Comercio De Pecas Ltda, TiKV, Red Hat Inc., Bilibili Inc., Buoyant Inc.",9,1.09,graduated
+152,Tinkerbell,1,88.54,Amazon,7,11.46,100.0,"Amazon, Equinix Inc., Kubermatic GmbH, VMware Inc., EMERGING TECHNOLOGY PARTNERS, RUPEAL, Google LLC, Samsung Research America Inc.",0,0.0,sandbox
+153,Tremor,1,96.0,Wayfair,2,4.0,100.0,"Wayfair, Maremoto Café & Cocktail, HP Inc.",0,0.0,sandbox
+154,Trickster,1,84.62,Virga,2,15.38,100.0,"Virga, GitLab, Inditex",0,0.0,sandbox
+155,TUF,2,70.21,"VMware Inc., NYU Langone Health",11,29.79,96.81,"VMware Inc., NYU Langone Health, Red Hat Inc., Datadog Inc, Google LLC, Independent, CNCF, Chainguard Inc., Cloudera Inc., Salesforce",3,3.19,
+156,Vineyard,1,58.55,Independent,3,41.45,100.0,"Independent, Alibaba.com, Genesys, ClearCode",0,0.0,sandbox
+157,Virtual Kubelet,1,90.1,Microsoft Corporation,7,9.9,100.0,"Microsoft Corporation, MUREX SAS, Stakater AB, Alibaba.com, G-Research, Independent, MinSheng Fintech, Netflix Inc.",0,0.0,sandbox
+158,Vitess,1,70.83,PlanetScale,32,29.17,97.41,"PlanetScale, Cisco, Slack Technologies Inc., Teachers Pay Teachers, Microsoft Corporation, Genesys, FreakOut Inc., Airplane, Accenture Global Solutions Limited, Shopify Inc.",23,2.59,graduated
+159,Volcano,4,62.96,"Google LLC, Huawei, International Business Machines Corporation, BoCloud",8,37.04,98.15,"Google LLC, Huawei, International Business Machines Corporation, BoCloud, Huawei Technologies Co. Ltd, DaoCloud Network Technology Co. Ltd., Independent, 杭州电子科技大学, Inspur Group, Alibaba.com",2,1.85,incubating
+160,VS Code Kubernetes Tools,3,75.0,"Fujitsu Limited, Microsoft Corporation, Red Hat Inc.",1,25.0,100.0,"Fujitsu Limited, Microsoft Corporation, Red Hat Inc., Weaveworks Inc.",0,0.0,
+161,wasmCloud,3,51.16,"Amazon, Lucid, wasmCloud",15,48.84,94.02,"Amazon, Lucid, wasmCloud, Microsoft Corporation, Google LLC, Roku, Independent, Capital One Financial Corporation, Jammin Music, Conductor",8,5.98,sandbox
+162,WasmEdge Runtime,1,79.9,Second State,11,20.1,99.52,"Second State, Microsoft Corporation, Independent, BMSCE IEEE, Debian, Google LLC, Red Hat Inc., ARM, Hashbang, SUSE LLC",2,0.48,sandbox
+163,werf,1,85.28,FLANT EUROPE OÜ,5,14.72,100.0,"FLANT EUROPE OÜ, Palark, My.Games, FLATSHARING, Independent, Meetup",0,0.0,sandbox
+164,Xline,1,89.19,SJTU SE,2,10.81,100.0,"SJTU SE, NetEase Inc, Uber",0,0.0,sandbox
+165,zot,2,87.04,"Luxoft, Embrane",10,12.96,99.34,"Luxoft, Embrane, Kalypso, Blood Orange, Trendyol Group, Aspect Software Inc., Chainguard Inc., Cisco, CNCF, FreeBSD",2,0.66,sandbox
