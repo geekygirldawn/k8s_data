@@ -111,7 +111,7 @@
 109,Notary,1,61.93,Microsoft Corporation,15,38.07,98.19,"Microsoft Corporation, Amazon, CNCF, Agitare, ADA Logics, Pluralsight, Genesys, Datadog Inc, Google LLC, Docker Inc.",6,1.81,Incubating
 110,OPA,3,57.32,"Styra Inc, Google LLC, Jetstack Ltd",57,42.68,86.62,"Styra Inc, Google LLC, Jetstack Ltd, Weaveworks Inc., Red Hat Inc., Microsoft Corporation, DaoCloud Network Technology Co. Ltd., ZTE Corporation, Independent, anesec",50,13.38,Graduated
 111,OPCR,1,100.0,Aserto,0,0.0,100.0,Aserto,0,0.0,Sandbox
-112,Open Cluster Management,1,64.82,Red Hat Inc.,6,35.18,100.0,"Red Hat Inc., International Business Machines Corporation, Caiyun Technology (Caicloud), Independent, Tencent Holdings Limited, ant group, Tigera Inc.",0,0.0,
+112,Open Cluster Management,1,64.82,Red Hat Inc.,6,35.18,100.0,"Red Hat Inc., International Business Machines Corporation, Caiyun Technology (Caicloud), Independent, Tencent Holdings Limited, ant group, Tigera Inc.",0,0.0,Sandbox
 113,OpenCost,2,66.37,"Stackwatch, Independent",35,33.63,89.49,"Stackwatch, Independent, Kubecost, Snowflake, Transcepta, Canonical Ltd., Platform24, Dell, Swiss Post, Ayoy AB",27,10.51,Sandbox
 114,OpenEBS,1,83.15,MayaData Inc. (f/k/a CloudByte Inc),14,16.85,99.3,"MayaData Inc. (f/k/a CloudByte Inc), DataCore Software, BrainGu, HiveMQ, Deutsche Bank AG, VMware Inc., Linaro Limited, Microsoft Corporation, Red Hat Inc., ANZ Banking Group Ltd.",5,0.7,Sandbox
 115,OpenELB,2,75.0,"DaoCloud Network Technology Co. Ltd., CloudCheckr Inc.",1,25.0,100.0,"DaoCloud Network Technology Co. Ltd., CloudCheckr Inc., Stakater AB",0,0.0,Sandbox
